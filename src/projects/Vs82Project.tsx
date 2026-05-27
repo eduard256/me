@@ -119,7 +119,6 @@ const COPY = {
   },
   cta: {
     site: { ru: "Открыть магазин", en: "Open the store" },
-    phone: "+7 978 007 04 44",
   },
 } as const;
 
@@ -202,10 +201,8 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <div className="mt-3 inline-flex items-center gap-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#1a0d04]/80 sm:text-base">
-            <span>{COPY.domain}</span>
-            <span aria-hidden className="h-px w-8 bg-[#1a0d04]/40" />
-            <span>{COPY.cta.phone}</span>
+          <div className="mt-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#1a0d04]/80 sm:text-base">
+            {COPY.domain}
           </div>
 
           <p className="mt-8 max-w-[700px] text-xl leading-snug text-[#1a0d04]/85 sm:text-2xl">
@@ -295,13 +292,13 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           </div>
         </motion.div>
 
-        {/* -------------------------------------------------------- ctas */}
+        {/* -------------------------------------------------------- cta */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 flex flex-wrap items-center gap-3"
+          className="mt-16"
         >
           <a
             href={`https://${COPY.domain}`}
@@ -313,12 +310,6 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
             <span aria-hidden className="transition group-hover:translate-x-1">
               →
             </span>
-          </a>
-          <a
-            href={`tel:${COPY.cta.phone.replace(/\s/g, "")}`}
-            className="rounded-full border border-[#1a0d04]/30 px-7 py-3 font-[var(--font-jetbrains)] text-sm tracking-[0.18em] text-[#1a0d04] transition hover:border-[#1a0d04] hover:bg-[#1a0d04] hover:text-[#F36C13]"
-          >
-            {COPY.cta.phone}
           </a>
         </motion.div>
       </div>

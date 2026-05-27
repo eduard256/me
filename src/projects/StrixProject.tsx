@@ -56,45 +56,18 @@ const COPY = {
       en: "We pick a model from 3,600 brands in the DB.",
     },
     {
-      ru: "Строим все URL, какие когда-либо встречались для этого устройства.",
-      en: "Build every URL ever seen for this device.",
-    },
-    {
-      ru: "20 воркеров проверяют каждый — скриншот, кодек, латентность.",
-      en: "20 workers test each — snapshot, codec, latency.",
-    },
-    {
-      ru: "Остаются только живые потоки.",
-      en: "Only living streams remain.",
-    },
-    {
-      ru: "Готовый YAML для Frigate. Со слиянием в существующий конфиг.",
-      en: "Ready Frigate YAML. Merged into your existing config.",
-    },
-    {
-      ru: "Камера #501 во Frigate. Без поломок.",
-      en: "Camera #501 in Frigate. Nothing broken.",
+      ru: "20 воркеров проверяют каждый URL — скриншот, кодек, латентность.",
+      en: "20 workers test each URL — snapshot, codec, latency.",
     },
   ],
-  install: { ru: "Поставить одной строкой", en: "Install with one line" },
-  links: {
-    github: "github.com/eduard256/Strix",
-    site: "gostrix.github.io",
-  },
-  meta: {
-    ru: ["★ 768 GitHub", "76 000+ загрузок", "MIT"],
-    en: ["★ 768 GitHub", "76,000+ downloads", "MIT"],
-  },
 } as const;
 
+/** Three screenshots out of the seven shipped — start, model match, and the
+ *  visually most active middle frame. The video at the top carries the rest. */
 const SHOTS = [
   { src: "/assets/strix/01-enter-ip.webp", w: 2878, h: 1626 },
   { src: "/assets/strix/02-camera-config.webp", w: 2878, h: 1626 },
-  { src: "/assets/strix/03-stream-urls.webp", w: 2878, h: 1626 },
   { src: "/assets/strix/04-testing.webp", w: 2878, h: 1626 },
-  { src: "/assets/strix/05-results.webp", w: 2878, h: 1626 },
-  { src: "/assets/strix/06-frigate-config.webp", w: 2878, h: 1626 },
-  { src: "/assets/strix/07-frigate-result.webp", w: 2878, h: 1626 },
 ];
 
 const VIDEO = {
@@ -236,46 +209,6 @@ export function StrixProject({ lang }: StrixProjectProps) {
         </div>
       </div>
 
-      {/* ------------------------------------------- closing card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-10% 0px" }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 mx-auto mt-28 max-w-[1100px] px-5 sm:mt-40 sm:px-8 lg:px-16"
-      >
-        <div className="relative overflow-hidden rounded-2xl border border-violet-400/20 bg-gradient-to-br from-violet-950/60 via-[#0c0623]/80 to-black/60 p-8 sm:p-12">
-          <div className="text-xs uppercase tracking-[0.32em] text-violet-300/70">
-            {COPY.install[lang]}
-          </div>
-          <pre className="mt-5 overflow-x-auto whitespace-pre rounded-lg bg-black/60 p-5 text-[13px] leading-relaxed text-violet-100/95 ring-1 ring-violet-400/10 sm:text-sm">
-            <code>
-              {`bash <(curl -fsSL \\
-  https://raw.githubusercontent.com/eduard256/Strix/main/install.sh)`}
-            </code>
-          </pre>
-
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-y-5">
-            <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-[0.22em] text-white/55">
-              {COPY.meta[lang].map((m) => (
-                <span key={m}>{m}</span>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <ProjectLink
-                href={`https://${COPY.links.github}`}
-                label={COPY.links.github}
-              />
-              <ProjectLink
-                href={`https://${COPY.links.site}`}
-                label={COPY.links.site}
-              />
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
       {/* Fade-out to the next project — softer transition than a hard cut. */}
       <div
         aria-hidden
@@ -304,10 +237,6 @@ function PipelineStep({
   caption: string;
   galleryIndex: number;
 }) {
-  /** Alternate a tiny lateral offset on desktop. Just enough to give the
-   *  film-strip feeling without becoming a gallery template. */
-  const offset = index % 2 === 0 ? "lg:-ml-4" : "lg:ml-12";
-
   return (
     <div className="relative">
       {/* Step number floating on the side. */}
@@ -324,7 +253,7 @@ function PipelineStep({
         height={h}
         gallery={GALLERY}
         index={galleryIndex}
-        className={`rounded-xl ring-1 ring-white/10 shadow-[0_30px_80px_-40px_rgba(91,43,220,0.6)] ${offset}`}
+        className="rounded-xl ring-1 ring-white/10 shadow-[0_30px_80px_-40px_rgba(91,43,220,0.6)]"
       />
 
       <Caption text={caption} className="mt-5" />
@@ -346,18 +275,3 @@ function Caption({ text, className = "" }: { text: string; className?: string })
   );
 }
 
-function ProjectLink({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={`${href}`}
-      target="_blank"
-      rel="noreferrer"
-      className="group inline-flex items-center gap-2 rounded-full border border-violet-300/30 bg-violet-500/10 px-4 py-2 text-xs uppercase tracking-[0.18em] text-violet-100 transition hover:border-violet-200/70 hover:bg-violet-400/20"
-    >
-      <span>{label}</span>
-      <span aria-hidden className="transition group-hover:translate-x-0.5">
-        ↗
-      </span>
-    </a>
-  );
-}

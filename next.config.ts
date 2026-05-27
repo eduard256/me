@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
+  // Allow LAN access during development so the site can be opened from a
+  // phone / another machine on the same network without HMR being blocked.
+  allowedDevOrigins: ["10.0.10.106", "localhost"],
 };
 
 export default nextConfig;
