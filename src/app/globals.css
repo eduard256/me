@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/*  Design tokens                                                             */
+/* -------------------------------------------------------------------------- */
+/*
+ * Only the global chrome lives here — the Hero, navigation, lightbox, and the
+ * shared <body> defaults. Each project slide brings its own palette, fonts,
+ * and rhythm in its own file. Anything that would compete with a project's
+ * identity must NOT be declared here.
+ */
+
+@theme {
+  /* The site is dark by default. Projects override per-block. */
+  --color-ink: #0a0a0a;
+  --color-paper: #fafafa;
+
+  /* Per-project font variables are injected at <html> level by next/font. */
+  --font-display: var(--font-fraunces);
+  --font-mono: var(--font-jetbrains);
+  --font-sans: var(--font-inter-tight);
+
+  /* Animation timings used by Hero grid + transitions. */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Base                                                                      */
+/* -------------------------------------------------------------------------- */
+
+html,
+body {
+  background: #050505;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Keep mobile Safari from bouncing past video sections. */
+  overscroll-behavior-y: none;
+}
+
+/* Selection feels chosen, not default. */
+::selection {
+  background: #fafafa;
+  color: #0a0a0a;
+}
+
+/* Browser scrollbar — slim, dark, unobtrusive. */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Reusable primitives                                                       */
+/* -------------------------------------------------------------------------- */
+
+/* Block separator — used between projects to soften the visual jump.
+ * Each project will fade its own background into transparent at its bottom
+ * edge so this never has to do heavy lifting on its own. */
+.project-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.08) 70%,
+    transparent
+  );
+}
+
+/* Image / video tile — every clickable media uses this base. */
+.media-tile {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: transform 400ms var(--ease-out-quart);
+}
+.media-tile:hover {
+  transform: translateY(-2px);
+}
+.media-tile img,
+.media-tile video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Focus styles are kept understated but legible. */
+:focus-visible {
+  outline: 2px solid #fafafa;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Hero — moving thumbnail grid                                              */
+/* -------------------------------------------------------------------------- */
+
+@keyframes hero-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    /* Move exactly half the doubled track height so the loop is seamless. */
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.hero-grid {
+  animation: hero-drift 120s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid {
+    animation: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Lightbox                                                                  */
+/* -------------------------------------------------------------------------- */
+
+.lightbox-overlay {
+  background: rgba(0, 0, 0, 0.94);
+  backdrop-filter: blur(8px);
+}
