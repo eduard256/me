@@ -1,18 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Media } from "@/components/Media";
-import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
 
 /* -------------------------------------------------------------------------- */
 /*  mcp-openai-images-audio                                                   */
 /* -------------------------------------------------------------------------- */
 /*
- * Visual identity:
- *   - Pastel gradient mesh sampled from gpt-image's own output — pinks,
- *     teals, dust-yellow. The slide IS a generated image.
- *   - Black mono type sits on top like a photo book caption.
+ * Text-only slide. No screenshot — the project is a single MCP tool, so the
+ * page leads with the tool call itself (one code block) plus the facts.
+ * Pastel gradient mesh sampled from gpt-image output keeps the AI-image
+ * personality without showing a generated picture.
  */
 
 interface McpOpenaiImagesAudioProjectProps {
@@ -23,28 +21,30 @@ const COPY = {
   kicker: { ru: "23 · MCP · PyPI", en: "23 · MCP · PyPI" },
   title: { ru: "mcp-openai-images-audio", en: "mcp-openai-images-audio" },
   tagline: {
-    ru: "Один MCP-tool `image`. gpt-image-2 / gpt-image-1.5 прямо в Claude Code. Файлы пишутся на диск, контекст остаётся чистым.",
-    en: "One MCP tool `image`. gpt-image-2 / gpt-image-1.5 inside Claude Code. Files land on disk; the context stays clean.",
+    ru: "Один MCP-tool `image`. gpt-image-2 / gpt-image-1.5 прямо в Claude Code. Файлы пишутся на диск — контекст остаётся чистым.",
+    en: "One MCP tool `image`. gpt-image-2 / gpt-image-1.5 inside Claude Code. Files land on disk — the context stays clean.",
   },
   facts: [
     { k: { ru: "Tools", en: "Tools" }, v: "1" },
-    { k: { ru: "Эндпоинтов", en: "Endpoints" }, v: { ru: "Авто-выбор по входу", en: "Auto-picked from input" } },
+    { k: { ru: "Режим", en: "Mode" }, v: { ru: "Авто-выбор по входу", en: "Auto-picked from input" } },
     { k: { ru: "Транспорт", en: "Transport" }, v: "stdio" },
     { k: { ru: "Релиз", en: "Release" }, v: "v0.1.0 · PyPI" },
   ],
-  shotCaption: {
-    ru: "Тот самый «GitHub, переосмысленный командой Instagram». Сгенерирован одним вызовом.",
-    en: "The original example: “GitHub, reimagined by Instagram's team.” One call, one image.",
-  },
   links: { github: "github.com/eduard256/mcp-openai-images-audio" },
 } as const;
 
-const HERO = { src: "/assets/mcp-openai-images-audio/example.webp", w: 2048, h: 1152 };
-const GALLERY: LightboxItem[] = [
-  { kind: "image", src: HERO.src, alt: "MCP image example", width: HERO.w, height: HERO.h },
-];
+const SNIPPET = `image(
+  prompt="github, reimagined by instagram's team",
+  output_path="/abs/path/mockup.webp",
+  size="2048x1152",
+  quality="high",
+)
+→ { path, bytes, model: "gpt-image-2",
+    has_alpha: false, estimated_cost_usd: 0.21 }`;
 
-export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjectProps) {
+export function McpOpenaiImagesAudioProject({
+  lang,
+}: McpOpenaiImagesAudioProjectProps) {
   return (
     <section
       id="mcp-openai-images-audio"
@@ -76,6 +76,20 @@ export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjec
           </p>
         </motion.div>
 
+        {/* The tool call — this replaces the screenshot. */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-12% 0px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-14"
+        >
+          <pre className="overflow-x-auto rounded-2xl bg-[#1c1820]/90 p-6 text-[12px] leading-relaxed text-[#f5f0e6] ring-1 ring-[#1c1820]/20 sm:p-8 sm:text-sm">
+            <code>{SNIPPET}</code>
+          </pre>
+        </motion.div>
+
+        {/* Facts */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,28 +109,6 @@ export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjec
           ))}
         </motion.div>
 
-        <div className="mt-16">
-          <Media
-            kind="image"
-            src={HERO.src}
-            alt="MCP image example"
-            width={HERO.w}
-            height={HERO.h}
-            gallery={GALLERY}
-            index={0}
-            className="rounded-2xl ring-1 ring-[#1c1820]/15 shadow-[0_50px_120px_-40px_rgba(28,24,32,0.35)]"
-          />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] text-xs uppercase tracking-[0.18em] text-[#1c1820]/70"
-          >
-            {COPY.shotCaption[lang]}
-          </motion.p>
-        </div>
-
         <div className="mt-12">
           <a
             href={`https://${COPY.links.github}`}
@@ -129,8 +121,6 @@ export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjec
           </a>
         </div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

@@ -21,20 +21,10 @@ interface VectorProjectProps {
 
 const COPY = {
   kicker: { ru: "13 · Демо · Услуги", en: "13 · Demo · Services" },
-  title: { ru: "VECTOR Academy", en: "VECTOR Academy" },
+  title: { ru: "VECTOR", en: "VECTOR" },
   tagline: {
-    ru: "Демо-лендинг выдуманной академии коучинга. Полная типовая структура продающего сайта услуг.",
-    en: "Demo landing for a fictional coaching academy. The full template of a service-business sales page.",
-  },
-  facts: [
-    { k: { ru: "Секций", en: "Sections" }, v: "9" },
-    { k: { ru: "Подача", en: "Format" }, v: { ru: "One-page", en: "One-page" } },
-    { k: { ru: "Бренд", en: "Brand" }, v: { ru: "Выдуман", en: "Fictional" } },
-    { k: { ru: "Зачем", en: "Why" }, v: { ru: "Аргумент для заказчиков", en: "Argument for prospects" } },
-  ],
-  shotCaption: {
-    ru: "«Трансформируйте свою жизнь.» — типовая структура услугового лендинга.",
-    en: "“Transform your life.” — the canonical structure of a services landing.",
+    ru: "Демо-лендинг для услуг и коучинга. Выдуманный бренд.",
+    en: "A demo landing for services and coaching. Fictional brand.",
   },
   links: { site: "vector.webaweba.com" },
 } as const;
@@ -74,63 +64,27 @@ export function VectorProject({ lang }: VectorProjectProps) {
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[12vw] leading-[0.92] font-light tracking-[-0.045em] sm:text-[8vw] lg:text-[120px]">
-            VECTOR{" "}
-            <span className="font-[family-name:var(--font-fraunces)] italic text-[#5b3fb8]">
-              Academy
-            </span>
+          <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[16vw] leading-[0.92] font-light tracking-[-0.045em] text-[#5b3fb8] sm:text-[11vw] lg:text-[150px]">
+            {COPY.title[lang]}
           </h2>
-
-          <p className="mt-8 max-w-[640px] text-xl leading-snug text-[#231a3e]/80 sm:text-2xl">
-            {COPY.tagline[lang]}
-          </p>
-        </motion.div>
-
-        {/* Facts */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-12% 0px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-[#231a3e]/15 pt-10 sm:grid-cols-4 sm:gap-x-10"
-        >
-          {COPY.facts.map((f) => (
-            <div key={f.k.ru}>
-              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#231a3e]/55">
-                {f.k[lang]}
-              </div>
-              <div className="mt-3 text-2xl leading-tight text-[#231a3e] sm:text-3xl">
-                {typeof f.v === "string" ? f.v : f.v[lang]}
-              </div>
-            </div>
-          ))}
         </motion.div>
 
         {/* Screenshot */}
-        <div className="mt-20 sm:mt-28">
+        <div className="mt-16 sm:mt-24">
           <Media
             kind="image"
             src={HERO.src}
-            alt="VECTOR Academy"
+            alt="VECTOR"
             width={HERO.w}
             height={HERO.h}
             gallery={GALLERY}
             index={0}
             className="rounded-2xl ring-1 ring-[#231a3e]/10 shadow-[0_50px_120px_-40px_rgba(91,63,184,0.35)]"
           />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#231a3e]/80 sm:text-2xl"
-          >
-            {COPY.shotCaption[lang]}
-          </motion.p>
         </div>
 
         {/* Link */}
-        <div className="mt-16">
+        <div className="mt-12">
           <a
             href={`https://${COPY.links.site}`}
             target="_blank"
@@ -142,8 +96,6 @@ export function VectorProject({ lang }: VectorProjectProps) {
           </a>
         </div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

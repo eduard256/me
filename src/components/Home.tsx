@@ -65,13 +65,13 @@ export function Home({ lang }: { lang: Lang }) {
       <HwProject lang={lang} />
       <MqttMcpServerProject lang={lang} />
       <McpJsProject lang={lang} />
+      <McpOpenaiImagesAudioProject lang={lang} />
       <TheMedProject lang={lang} />
       <PalubaProject lang={lang} />
       <YagopereProject lang={lang} />
       <VectorProject lang={lang} />
       <CamWebawebaProject lang={lang} />
       <FrinklipProject lang={lang} />
-      <McpOpenaiImagesAudioProject lang={lang} />
     </main>
   );
 }
