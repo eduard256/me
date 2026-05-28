@@ -195,7 +195,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           </div>
 
           <h2
-            className="mt-6 font-[family-name:var(--font-archivo)] text-[14vw] leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[160px]"
+            className="mt-6 font-[family-name:var(--font-inter-tight)] text-[14vw] font-light leading-[0.88] tracking-[-0.04em] sm:text-[10vw] lg:text-[160px]"
             style={{ textTransform: "uppercase" }}
           >
             {COPY.title[lang]}

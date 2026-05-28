@@ -22,7 +22,7 @@ interface YagopereProjectProps {
 
 const COPY = {
   kicker: { ru: "12 · Клиент · Крым", en: "12 · Client · Crimea" },
-  title: { ru: "Ягопере", en: "Yagopere" },
+  title: { ru: "Yagopere", en: "Yagopere" },
   tagline: {
     ru: "Сайт-витрина крымского семейного хозяйства.",
     en: "Storefront for a Crimean family farm.",
