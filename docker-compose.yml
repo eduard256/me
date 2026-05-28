@@ -1,0 +1,7 @@
+services:
+  me:
+    image: 10.0.9.3:5000/me:latest
+    container_name: me
+    restart: unless-stopped
+    ports:
+      - "3012:80"
