@@ -27,18 +27,6 @@ interface TheMedProjectProps {
 const COPY = {
   kicker: { ru: "04 · Демо · Food", en: "04 · Demo · Food" },
   title: { ru: "THE МЁД", en: "THE МЁД" },
-  tagline: {
-    ru: "Выдуманная пекарня. Натуральный мёд. Все фото нарисованы AI.",
-    en: "Fictional bakery. Real honey. Every photo is AI-generated.",
-  },
-  body: {
-    ru: "Учебный проект, на котором отрабатывалась эстетика food-сайтов: кремовая палитра, тёплые деревянные подложки, сериф-типографика, минимум визуального шума.",
-    en: "A study in food-site aesthetics: cream palette, warm wooden trays, serif typography, almost no visual noise.",
-  },
-  shotCaption: {
-    ru: "«Выпечка, которой гордятся пчёлы.» — слоган, который не стыдно нести в живой бизнес.",
-    en: "“Pastry the bees are proud of.” — a tagline ready for a real bakery.",
-  },
   links: { site: "themed.webaweba.com" },
 } as const;
 
@@ -90,75 +78,46 @@ export function TheMedProject({ lang }: TheMedProjectProps) {
           className="mt-16 text-center sm:mt-24"
         >
           <h2
-            className="font-[var(--font-instrument)] text-[18vw] leading-[0.95] italic font-normal tracking-[-0.02em] sm:text-[13vw] lg:text-[180px]"
-            style={{ fontFeatureSettings: '"liga", "dlig"' }}
+            className="text-[16vw] uppercase leading-[1.1] tracking-[-0.02em] text-[#2C2416] sm:text-[12vw] lg:text-[150px]"
+            style={{ fontFamily: "var(--font-dela)" }}
           >
             {COPY.title[lang]}
           </h2>
-
-          <p className="mx-auto mt-8 max-w-[640px] text-2xl leading-snug text-[#231a0e]/85 sm:text-3xl">
-            {COPY.tagline[lang]}
-          </p>
-
-          <p className="mx-auto mt-8 max-w-[600px] font-[var(--font-inter-tight)] text-base leading-relaxed text-[#231a0e]/75 sm:text-lg">
-            {COPY.body[lang]}
-          </p>
         </motion.div>
 
         {/* Big framed screenshot */}
-        <div className="mt-20 sm:mt-28">
-          <div className="relative">
-            <Media
-              kind="image"
-              src={HERO.src}
-              alt="THE МЁД demo"
-              width={HERO.w}
-              height={HERO.h}
-              gallery={GALLERY}
-              index={0}
-              className="rounded-sm ring-1 ring-[#231a0e]/20 shadow-[0_60px_140px_-40px_rgba(35,26,14,0.4)]"
-            />
-            {/* Decorative caption number */}
-            <div className="absolute -top-6 -left-2 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/60">
-              Plate 01
-            </div>
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-8 max-w-[640px] text-center font-[var(--font-instrument)] text-xl italic text-[#231a0e]/80 sm:text-2xl"
-          >
-            {COPY.shotCaption[lang]}
-          </motion.p>
+        <div className="mt-16 sm:mt-20">
+          <Media
+            kind="image"
+            src={HERO.src}
+            alt="THE МЁД demo"
+            width={HERO.w}
+            height={HERO.h}
+            gallery={GALLERY}
+            index={0}
+            className="rounded-sm ring-1 ring-[#231a0e]/20 shadow-[0_60px_140px_-40px_rgba(35,26,14,0.4)]"
+          />
         </div>
 
-        {/* Footer line */}
+        {/* Link button */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 0.7 }}
-          className="mt-20 flex flex-wrap items-center justify-between gap-4 border-t border-[#231a0e]/35 pt-6"
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 flex justify-center"
         >
-          <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/65">
-            {lang === "ru" ? "Учебный проект · 2026" : "Personal study · 2026"}
-          </span>
           <a
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.25em] text-[#231a0e] underline-offset-4 transition hover:underline"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#231a0e] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f6efe1] transition hover:bg-black"
           >
             <span>{COPY.links.site}</span>
-            <span aria-hidden className="transition group-hover:translate-x-0.5">↗</span>
+            <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
           </a>
         </motion.div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

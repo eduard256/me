@@ -6,6 +6,7 @@ import {
   Archivo_Black,
   Space_Grotesk,
   Instrument_Serif,
+  Dela_Gothic_One,
 } from "next/font/google";
 import "./globals.css";
 import { LightboxProvider } from "@/components/Lightbox";
@@ -65,6 +66,13 @@ const fontSpaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const fontDela = Dela_Gothic_One({
+  variable: "--font-dela",
+  weight: "400",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+});
+
 /* -------------------------------------------------------------------------- */
 /*  Metadata                                                                  */
 /* -------------------------------------------------------------------------- */
@@ -97,6 +105,7 @@ export default function RootLayout({
     fontInstrument.variable,
     fontInter.variable,
     fontSpaceGrotesk.variable,
+    fontDela.variable,
   ].join(" ");
 
   return (
