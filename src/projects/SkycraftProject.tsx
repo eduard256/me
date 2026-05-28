@@ -26,7 +26,7 @@ const COPY = {
   kicker: { ru: "08 · Личный · Rust · Заброшен", en: "08 · Personal · Rust · Abandoned" },
   title: { ru: "Sky Craft", en: "Sky Craft" },
   quote: {
-    ru: "«Сделал за один день при температуре 39.5°C в паре с AI. Я в тот день просто ебанулся и не понимал, что делаю.»",
+    ru: "«Сделал за один день при температуре 39.5°C в паре с AI. В тот день был не в себе и не понимал, что делаю.»",
     en: "“Wrote it in one day at 39.5°C fever, hand in hand with AI. That day I just lost my mind and had no idea what I was doing.”",
   },
   facts: [

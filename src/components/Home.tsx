@@ -51,21 +51,21 @@ export function Home({ lang }: { lang: Lang }) {
       <VastProject lang={lang} />
       <ImgableProject lang={lang} />
       <JamperhubProject lang={lang} />
+      <TheZoltoProject lang={lang} />
+      <PanelProject lang={lang} />
+      <SkycraftProject lang={lang} />
+      <PixelGridProject lang={lang} />
+      <FlowparxProject lang={lang} />
+      <GostrixProject lang={lang} />
       <TheMedProject lang={lang} />
       <PalubaProject lang={lang} />
-      <SkycraftProject lang={lang} />
-      <FlowparxProject lang={lang} />
       <YagopereProject lang={lang} />
       <VectorProject lang={lang} />
-      <PanelProject lang={lang} />
-      <TheZoltoProject lang={lang} />
       <DzProject lang={lang} />
       <HwProject lang={lang} />
       <CamWebawebaProject lang={lang} />
-      <GostrixProject lang={lang} />
       <FrinklipProject lang={lang} />
       <TextProject lang={lang} />
-      <PixelGridProject lang={lang} />
       <McpOpenaiImagesAudioProject lang={lang} />
 
       {/* Text-only infrastructure tail */}
