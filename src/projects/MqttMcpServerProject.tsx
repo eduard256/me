@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  mqtt-mcp-server                                                           */
@@ -15,7 +16,7 @@ interface MqttMcpServerProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "28 · MCP · PyPI 1.0.7", en: "28 · MCP · PyPI 1.0.7" },
+  kicker: { ru: "MCP · PyPI 1.0.7", en: "MCP · PyPI 1.0.7" },
   title: { ru: "mqtt-mcp-server", en: "mqtt-mcp-server" },
   tagline: {
     ru: "Любой MQTT-брокер становится доступным AI-ассистенту. Четыре инструмента — discover, read, publish, monitor.",
@@ -64,7 +65,7 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#7fe6ff]">
             <span aria-hidden className="h-px w-10 bg-[#7fe6ff]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[10vw] leading-[0.9] font-medium tracking-[-0.04em] sm:text-[6vw] lg:text-[100px]">

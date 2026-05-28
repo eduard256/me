@@ -1,4 +1,5 @@
 import { Hero } from "./Hero";
+import { ProjectList } from "./ProjectNumber";
 import { StrixProject } from "@/projects/StrixProject";
 import { Vs82Project } from "@/projects/Vs82Project";
 import { ImgableProject } from "@/projects/ImgableProject";
@@ -43,35 +44,38 @@ export function Home({ lang }: { lang: Lang }) {
     <main>
       <Hero lang={lang} />
 
-      {/* Loud, asset-rich */}
-      <StrixProject lang={lang} />
-      <Vs82Project lang={lang} />
-      <MeetProject lang={lang} />
-      <BeaverNotesProject lang={lang} />
-      <VastProject lang={lang} />
-      <ImgableProject lang={lang} />
-      <JamperhubProject lang={lang} />
-      <TheZoltoProject lang={lang} />
-      <PanelProject lang={lang} />
-      <SkycraftProject lang={lang} />
-      <PixelGridProject lang={lang} />
-      <FlowparxProject lang={lang} />
-      <GostrixProject lang={lang} />
-      <Claudecode2apiProject lang={lang} />
-      <RussiaBlockedIpsProject lang={lang} />
-      <BambooTunnelProject lang={lang} />
-      <TextProject lang={lang} />
-      <DzProject lang={lang} />
-      <HwProject lang={lang} />
-      <MqttMcpServerProject lang={lang} />
-      <McpJsProject lang={lang} />
-      <McpOpenaiImagesAudioProject lang={lang} />
-      <TheMedProject lang={lang} />
-      <PalubaProject lang={lang} />
-      <YagopereProject lang={lang} />
-      <VectorProject lang={lang} />
-      <CamWebawebaProject lang={lang} />
-      <FrinklipProject lang={lang} />
+      {/* Project blocks. Their kicker number is derived from this order by
+          <ProjectList>, so reordering here is the single source of truth. */}
+      <ProjectList>
+        <StrixProject lang={lang} />
+        <Vs82Project lang={lang} />
+        <MeetProject lang={lang} />
+        <BeaverNotesProject lang={lang} />
+        <VastProject lang={lang} />
+        <ImgableProject lang={lang} />
+        <JamperhubProject lang={lang} />
+        <TheZoltoProject lang={lang} />
+        <PanelProject lang={lang} />
+        <SkycraftProject lang={lang} />
+        <PixelGridProject lang={lang} />
+        <FlowparxProject lang={lang} />
+        <GostrixProject lang={lang} />
+        <Claudecode2apiProject lang={lang} />
+        <RussiaBlockedIpsProject lang={lang} />
+        <BambooTunnelProject lang={lang} />
+        <TextProject lang={lang} />
+        <DzProject lang={lang} />
+        <HwProject lang={lang} />
+        <MqttMcpServerProject lang={lang} />
+        <McpJsProject lang={lang} />
+        <McpOpenaiImagesAudioProject lang={lang} />
+        <TheMedProject lang={lang} />
+        <PalubaProject lang={lang} />
+        <YagopereProject lang={lang} />
+        <VectorProject lang={lang} />
+        <CamWebawebaProject lang={lang} />
+        <FrinklipProject lang={lang} />
+      </ProjectList>
     </main>
   );
 }

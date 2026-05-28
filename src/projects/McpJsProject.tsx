@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  mcp-js                                                                    */
@@ -16,7 +17,7 @@ interface McpJsProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "27 · MCP · Chrome Extension", en: "27 · MCP · Chrome Extension" },
+  kicker: { ru: "MCP · Chrome Extension", en: "MCP · Chrome Extension" },
   title: { ru: "mcp-js", en: "mcp-js" },
   tagline: {
     ru: "Один tool `execute_js`. Claude получает руль в активной вкладке Chrome.",
@@ -56,7 +57,7 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#e9c96d]">
             <span aria-hidden className="h-px w-10 bg-[#e9c96d]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[14vw] leading-[0.88] font-medium tracking-[-0.04em] sm:text-[10vw] lg:text-[140px]">

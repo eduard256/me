@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Text Normalizer                                                           */
@@ -21,7 +22,7 @@ interface TextProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "21 · Утилита · Docker", en: "21 · Utility · Docker" },
+  kicker: { ru: "Утилита · Docker", en: "Utility · Docker" },
   title: { ru: "text-normalizer", en: "text-normalizer" },
   tagline: {
     ru: "Срезает мусорные пробелы и переносы строк из вывода Claude Code, ssh-логов и pdf-вырезок.",
@@ -59,7 +60,7 @@ export function TextProject({ lang }: TextProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#7eddc6]">
             <span aria-hidden className="h-px w-10 bg-[#7eddc6]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[8vw] leading-[0.92] font-light tracking-[-0.04em] sm:text-[5vw] lg:text-[80px]">

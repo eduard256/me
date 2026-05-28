@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  THE ZOLTO                                                                 */
@@ -22,7 +23,7 @@ interface TheZoltoProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "15 · Личный · Игра", en: "15 · Personal · Game" },
+  kicker: { ru: "Личный · Игра", en: "Personal · Game" },
   title: { ru: "THE ZOLTO", en: "THE ZOLTO" },
   tagline: {
     ru: "Многопользовательский аукцион на золотые слитки. Тайные ставки. Все теряют, даже победитель.",
@@ -93,7 +94,7 @@ export function TheZoltoProject({ lang }: TheZoltoProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#c69845]">
             <span aria-hidden className="h-px w-10 bg-[#c69845]/50" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-archivo)] text-[14vw] uppercase leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[180px]">

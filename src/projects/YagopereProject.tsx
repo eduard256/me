@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Ягопере                                                                   */
@@ -21,7 +22,7 @@ interface YagopereProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "12 · Клиент · Крым", en: "12 · Client · Crimea" },
+  kicker: { ru: "Клиент · Крым", en: "Client · Crimea" },
   title: { ru: "Yagopere", en: "Yagopere" },
   tagline: {
     ru: "Сайт-витрина крымского семейного хозяйства.",
@@ -52,7 +53,7 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#3b1f2b]/65">
             <span aria-hidden className="h-px w-10 bg-[#3b1f2b]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[18vw] leading-[0.9] font-light tracking-[-0.02em] text-[#5b1e2e] sm:text-[13vw] lg:text-[200px]">

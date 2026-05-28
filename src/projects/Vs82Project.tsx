@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Vs82 — Вечная Стройка                                                     */
@@ -30,7 +31,7 @@ interface Vs82ProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "02 · Клиентский e-commerce", en: "02 · Client e-commerce" },
+  kicker: { ru: "Клиентский e-commerce", en: "Client e-commerce" },
   title: { ru: "Вечная Стройка", en: "Vs82.ru" },
   domain: "vs82.ru",
   tagline: {
@@ -191,7 +192,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1a0d04]/80">
             <span aria-hidden className="h-px w-10 bg-[#1a0d04]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2

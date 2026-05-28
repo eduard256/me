@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Beaver Notes                                                              */
@@ -25,7 +26,7 @@ interface BeaverNotesProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "06 · Open source · Self-hosted", en: "06 · Open source · Self-hosted" },
+  kicker: { ru: "Open source · Self-hosted", en: "Open source · Self-hosted" },
   title: { ru: "Beaver Notes", en: "Beaver Notes" },
   tagline: {
     ru: "Saved Messages, которому можно доверять. Сервер на Go с веб-клиентом и PWA, плюс нативное приложение на SwiftUI для iOS / iPadOS / macOS.",
@@ -93,7 +94,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f4ece0]/55">
             <span aria-hidden className="h-px w-10 bg-[#f4ece0]/30" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2

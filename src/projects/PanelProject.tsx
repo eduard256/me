@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Home Panel                                                                */
@@ -21,7 +22,7 @@ interface PanelProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "14 · Личный · Приватный", en: "14 · Personal · Private" },
+  kicker: { ru: "Личный · Приватный", en: "Personal · Private" },
   title: { ru: "Home Panel", en: "Home Panel" },
   tagline: {
     ru: "Личная панель для homelab автора. Серверы, виртуалки, камеры, умный дом, автоматизации — и AI, который всем этим управляет.",
@@ -73,7 +74,7 @@ export function PanelProject({ lang }: PanelProjectProps) {
           <div>
             <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#a896ff]">
               <span aria-hidden className="h-px w-10 bg-[#a896ff]/40" />
-              <span>{COPY.kicker[lang]}</span>
+              <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
             </div>
 
             <h2 className="mt-6 text-[12vw] leading-[0.9] font-light tracking-[-0.04em] sm:text-[8vw] lg:text-[140px]">

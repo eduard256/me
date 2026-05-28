@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  vast — Video AI Streaming Torrent                                         */
@@ -22,7 +23,7 @@ interface VastProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "09 · Open source · Go", en: "09 · Open source · Go" },
+  kicker: { ru: "Open source · Go", en: "Open source · Go" },
   title: "vast",
   tagline: {
     ru: "Plex, Sonarr, Radarr, Jackett, qBittorrent, Jellyfin — заменены одним Go-бинарником.",
@@ -85,7 +86,7 @@ export function VastProject({ lang }: VastProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#9ed28f]">
             <span aria-hidden className="h-px w-10 bg-[#9ed28f]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-jetbrains)] text-[20vw] leading-[0.86] font-light tracking-[-0.05em] sm:text-[14vw] lg:text-[220px]">

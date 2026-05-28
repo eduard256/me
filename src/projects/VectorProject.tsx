@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  VECTOR Academy                                                            */
@@ -20,7 +21,7 @@ interface VectorProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "13 · Демо · Услуги", en: "13 · Demo · Services" },
+  kicker: { ru: "Демо · Услуги", en: "Demo · Services" },
   title: { ru: "VECTOR", en: "VECTOR" },
   tagline: {
     ru: "Демо-лендинг для услуг и коучинга. Выдуманный бренд.",
@@ -61,7 +62,7 @@ export function VectorProject({ lang }: VectorProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#5b3fb8]">
             <span aria-hidden className="h-px w-10 bg-[#5b3fb8]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[16vw] leading-[0.92] font-light tracking-[-0.045em] text-[#5b3fb8] sm:text-[11vw] lg:text-[150px]">

@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  imgable                                                                   */
@@ -31,7 +32,7 @@ interface ImgableProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "03 · Демонстрация навыка · Go + Python + TS", en: "03 · Skill demo · Go + Python + TS" },
+  kicker: { ru: "Демонстрация навыка · Go + Python + TS", en: "Skill demo · Go + Python + TS" },
   title: { ru: "imgable", en: "imgable" },
   tagline: {
     ru: "Своя фото-галерея в духе Nextcloud и Immich. Каждое фото проходит предобработку и оптимизацию в один универсальный формат, чтобы лента листалась мгновенно.",
@@ -108,7 +109,7 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0d0d10]/55">
             <span aria-hidden className="h-px w-10 bg-[#0d0d10]/30" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2

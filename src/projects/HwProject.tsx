@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  hw                                                                        */
@@ -21,7 +22,7 @@ interface HwProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "17 · B2B SaaS · Подписка", en: "17 · B2B SaaS · Subscription" },
+  kicker: { ru: "B2B SaaS · Подписка", en: "B2B SaaS · Subscription" },
   title: { ru: "hw", en: "hw" },
   subtitle: { ru: "Домашки для репетиторов английского", en: "Homework for English tutors" },
   tagline: {
@@ -63,7 +64,7 @@ export function HwProject({ lang }: HwProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#231a12]/65">
             <span aria-hidden className="h-px w-10 bg-[#231a12]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[22vw] leading-[0.85] font-light tracking-[-0.04em] sm:text-[18vw] lg:text-[260px]">

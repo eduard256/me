@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Журнал переводов (dz)                                                     */
@@ -21,7 +22,7 @@ interface DzProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "16 · Клиент · Приватный · → hw", en: "16 · Client · Private · → hw" },
+  kicker: { ru: "Клиент · Приватный · → hw", en: "Client · Private · → hw" },
   title: { ru: "Журнал переводов", en: "Translation Journal" },
   tagline: {
     ru: "Заказной инструмент для репетитора. AI читает русскую домашку и английский перевод ученика — и за 25 секунд выдаёт пронумерованный разбор ошибок.",
@@ -61,7 +62,7 @@ export function DzProject({ lang }: DzProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#9b2316]">
             <span aria-hidden className="h-px w-10 bg-[#9b2316]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[10vw] leading-[0.95] font-light italic tracking-[-0.02em] sm:text-[7vw] lg:text-[110px]">

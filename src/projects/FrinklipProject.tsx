@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Frinklip                                                                  */
@@ -20,7 +21,7 @@ interface FrinklipProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "20 · AI-tooling · Go", en: "20 · AI tooling · Go" },
+  kicker: { ru: "AI-tooling · Go", en: "AI tooling · Go" },
   title: { ru: "frinklip", en: "frinklip" },
   tagline: {
     ru: "Кидаешь файл в браузер из любого устройства в LAN — получаешь абсолютный путь, готовый для вставки в Claude Code.",
@@ -66,7 +67,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0f2a1e]/65">
             <span aria-hidden className="h-px w-10 bg-[#0f2a1e]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[18vw] leading-[0.88] font-medium tracking-[-0.04em] sm:text-[12vw] lg:text-[180px]">

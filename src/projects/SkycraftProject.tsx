@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Sky Craft                                                                 */
@@ -23,7 +24,7 @@ interface SkycraftProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "08 · Личный · Rust · Заброшен", en: "08 · Personal · Rust · Abandoned" },
+  kicker: { ru: "Личный · Rust · Заброшен", en: "Personal · Rust · Abandoned" },
   title: { ru: "Sky Craft", en: "Sky Craft" },
   quote: {
     ru: "«Сделал за один день при температуре 39.5°C в паре с AI. В тот день был не в себе и не понимал, что делаю.»",
@@ -89,7 +90,7 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f3eee6]/55">
             <span aria-hidden className="block h-2 w-2 animate-pulse rounded-full bg-[#ef3a3a]" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2

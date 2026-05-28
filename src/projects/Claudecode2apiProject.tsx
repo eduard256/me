@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  claudecode2api                                                            */
@@ -16,7 +17,7 @@ interface Claudecode2apiProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "24 · OSS · HTTP-шлюз", en: "24 · OSS · HTTP gateway" },
+  kicker: { ru: "OSS · HTTP-шлюз", en: "OSS · HTTP gateway" },
   title: { ru: "claudecode2api", en: "claudecode2api" },
   tagline: {
     ru: "Локальный `claude` CLI превращается в HTTP-сервис: SSE-стриминг, параллельные сессии, тонкие пермишены, basic auth.",
@@ -71,7 +72,7 @@ export function Claudecode2apiProject({ lang }: Claudecode2apiProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#7fb1e5]">
             <span aria-hidden className="h-px w-10 bg-[#7fb1e5]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[12vw] leading-[0.9] font-light tracking-[-0.04em] sm:text-[7vw] lg:text-[120px]">

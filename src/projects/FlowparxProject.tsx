@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  FLOW PARX                                                                 */
@@ -21,7 +22,7 @@ interface FlowparxProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "10 · Клиент · Срочно", en: "10 · Client · Rush" },
+  kicker: { ru: "Клиент · Срочно", en: "Client · Rush" },
   title: { ru: "FLOW PARX", en: "FLOW PARX" },
   subtitle: { ru: "Спортивная инфраструктура на воде", en: "Watersports infrastructure" },
   tagline: {
@@ -60,7 +61,7 @@ export function FlowparxProject({ lang }: FlowparxProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/65">
             <span aria-hidden className="h-px w-10 bg-white/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[14vw] leading-[0.88] font-light tracking-[-0.04em] sm:text-[10vw] lg:text-[150px]">

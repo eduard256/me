@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  gostrix.github.io                                                         */
@@ -20,7 +21,7 @@ interface GostrixProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "19 · Маркетинг · Appendix к Strix", en: "19 · Marketing · Strix appendix" },
+  kicker: { ru: "Маркетинг · Appendix к Strix", en: "Marketing · Strix appendix" },
   title: { ru: "gostrix.github.io", en: "gostrix.github.io" },
   // Tagline is split so the word "Strix" can render as an anchor link back
   // to the Strix slide higher up the page.
@@ -61,7 +62,7 @@ export function GostrixProject({ lang }: GostrixProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-violet-300/75">
             <span aria-hidden className="h-px w-10 bg-violet-300/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[6vw] leading-[0.95] font-light tracking-[-0.04em] sm:text-[4vw] lg:text-[60px]">

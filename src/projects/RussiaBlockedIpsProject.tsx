@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  russia-blocked-ips                                                        */
@@ -15,7 +16,7 @@ interface RussiaBlockedIpsProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "26 · OSS · Данные", en: "26 · OSS · Data" },
+  kicker: { ru: "OSS · Данные", en: "OSS · Data" },
   title: { ru: "russia-blocked-ips", en: "russia-blocked-ips" },
   tagline: {
     ru: "Регулярно обновляемый список CIDR из 146 источников и кросс-платформенный клиент-демон для роутера.",
@@ -62,7 +63,7 @@ export function RussiaBlockedIpsProject({ lang }: RussiaBlockedIpsProjectProps) 
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#f3f3f3]/55">
             <span aria-hidden className="h-px w-10 bg-[#f3f3f3]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[8vw] leading-[0.92] font-light tracking-[-0.04em] sm:text-[5vw] lg:text-[80px]">

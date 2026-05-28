@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Палуба                                                                    */
@@ -23,7 +24,7 @@ interface PalubaProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "07 · Клиент · QR-меню", en: "07 · Client · QR menu" },
+  kicker: { ru: "Клиент · QR-меню", en: "Client · QR menu" },
   title: { ru: "Палуба", en: "Paluba" },
   tagline: {
     ru: "QR на лежаке → заказ летит на кухню. Общая корзина в реальном времени.",
@@ -66,7 +67,7 @@ export function PalubaProject({ lang }: PalubaProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1f2a2b]/65">
             <span aria-hidden className="h-px w-10 bg-[#1f2a2b]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2

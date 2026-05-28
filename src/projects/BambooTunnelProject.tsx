@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  Bamboo Tunnel                                                             */
@@ -16,7 +17,7 @@ interface BambooTunnelProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "25 · OSS · Сетевой софт", en: "25 · OSS · Network software" },
+  kicker: { ru: "OSS · Сетевой софт", en: "OSS · Network software" },
   title: { ru: "Bamboo Tunnel", en: "Bamboo Tunnel" },
   tagline: {
     ru: "Обратный туннель, который для DPI выглядит как поток видеоконференций. 110–150 Мбит/с через HTTP/2.",
@@ -63,7 +64,7 @@ export function BambooTunnelProject({ lang }: BambooTunnelProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#7ed0a4]">
             <span aria-hidden className="h-px w-10 bg-[#7ed0a4]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[12vw] leading-[0.9] font-light tracking-[-0.04em] sm:text-[7vw] lg:text-[130px]">

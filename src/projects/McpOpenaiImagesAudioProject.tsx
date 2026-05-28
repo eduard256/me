@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  mcp-openai-images-audio                                                   */
@@ -18,7 +19,7 @@ interface McpOpenaiImagesAudioProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "23 · MCP · PyPI", en: "23 · MCP · PyPI" },
+  kicker: { ru: "MCP · PyPI", en: "MCP · PyPI" },
   title: { ru: "mcp-openai-images-audio", en: "mcp-openai-images-audio" },
   tagline: {
     ru: "Один MCP-tool `image`. gpt-image-2 / gpt-image-1.5 прямо в Claude Code. Файлы пишутся на диск — контекст остаётся чистым.",
@@ -64,7 +65,7 @@ export function McpOpenaiImagesAudioProject({
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#1c1820]/60">
             <span aria-hidden className="h-px w-10 bg-[#1c1820]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[8vw] leading-[0.95] font-light tracking-[-0.04em] sm:text-[5vw] lg:text-[72px]">

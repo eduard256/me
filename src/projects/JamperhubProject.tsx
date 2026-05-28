@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  JamperHUB                                                                 */
@@ -22,7 +23,7 @@ interface JamperhubProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "11 · Open source · Go", en: "11 · Open source · Go" },
+  kicker: { ru: "Open source · Go", en: "Open source · Go" },
   title: { ru: "JamperHUB", en: "JamperHUB" },
   tagline: {
     ru: "Несколько VPN-туннелей сразу. Балансировщик сам выбирает живой и быстрый. Падает один — переключается за миллисекунды.",
@@ -98,7 +99,7 @@ export function JamperhubProject({ lang }: JamperhubProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#3df57e]">
             <span aria-hidden className="block h-2 w-2 animate-pulse rounded-full bg-[#3df57e]" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 text-[14vw] leading-[0.88] font-light tracking-[-0.05em] sm:text-[10vw] lg:text-[160px]">

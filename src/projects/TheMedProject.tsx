@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  THE МЁД                                                                   */
@@ -25,7 +26,7 @@ interface TheMedProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "04 · Демо · Food", en: "04 · Demo · Food" },
+  kicker: { ru: "Демо · Food", en: "Demo · Food" },
   title: { ru: "THE МЁД", en: "THE МЁД" },
   links: { site: "themed.webaweba.com" },
 } as const;

@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  meet.webaweba.com                                                         */
@@ -25,7 +26,7 @@ interface MeetProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "05 · Личный · 5 микросервисов", en: "05 · Personal · 5 microservices" },
+  kicker: { ru: "Личный · 5 микросервисов", en: "Personal · 5 microservices" },
   title: { ru: "meet", en: "meet" },
   subtitle: { ru: "meet.webaweba.com", en: "meet.webaweba.com" },
   tagline: {
@@ -111,7 +112,7 @@ export function MeetProject({ lang }: MeetProjectProps) {
         >
           <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/55">
             <span aria-hidden className="block h-2 w-2 animate-pulse rounded-full bg-[#ff3b3b]" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <h2 className="mt-6 flex items-baseline gap-3 font-[family-name:var(--font-space-grotesk)] text-[18vw] leading-[0.86] font-medium tracking-[-0.04em] sm:text-[13vw] lg:text-[200px]">

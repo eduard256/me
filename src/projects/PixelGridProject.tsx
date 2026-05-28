@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Media } from "@/components/Media";
 import type { LightboxItem } from "@/components/Lightbox";
 import type { Lang } from "@/lib/i18n";
+import { useProjectNumber } from "@/components/ProjectNumber";
 
 /* -------------------------------------------------------------------------- */
 /*  PixelGrid                                                                 */
@@ -20,7 +21,7 @@ interface PixelGridProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "22 · Утилита · Браузерная", en: "22 · Utility · Browser" },
+  kicker: { ru: "Утилита · Браузерная", en: "Utility · Browser" },
   title: "PixelGrid",
   size: "1280 × 720",
   tagline: {
@@ -68,7 +69,7 @@ export function PixelGridProject({ lang }: PixelGridProjectProps) {
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-[#7c8cd8]">
             <span aria-hidden className="h-px w-10 bg-[#7c8cd8]/40" />
-            <span>{COPY.kicker[lang]}</span>
+            <span>{useProjectNumber()} · {COPY.kicker[lang]}</span>
           </div>
 
           <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-3">
