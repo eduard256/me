@@ -22,14 +22,20 @@ interface GostrixProjectProps {
 const COPY = {
   kicker: { ru: "19 · Маркетинг · Appendix к Strix", en: "19 · Marketing · Strix appendix" },
   title: { ru: "gostrix.github.io", en: "gostrix.github.io" },
-  tagline: {
-    ru: "Промо-сайт + публичный поиск по 67 000 моделей камер. GitHub Pages, без backend.",
-    en: "Marketing site + public search across 67,000 camera models. GitHub Pages, no backend.",
+  // Tagline is split so the word "Strix" can render as an anchor link back
+  // to the Strix slide higher up the page.
+  taglineBefore: {
+    ru: "Промо-сайт для ",
+    en: "Marketing site for ",
+  },
+  taglineAfter: {
+    ru: " + публичный поиск по 67 000 моделей камер.",
+    en: " + public search across 67,000 camera models.",
   },
   facts: [
-    { k: { ru: "Хост", en: "Host" }, v: "GitHub Pages" },
-    { k: { ru: "Демо", en: "Demo" }, v: { ru: "Прямо в браузере", en: "Right in the browser" } },
-    { k: { ru: "База", en: "DB" }, v: { ru: "67k моделей, на клиенте", en: "67k models, client-side" } },
+    { k: { ru: "Фронт", en: "Front" }, v: "GitHub Pages" },
+    { k: { ru: "Бэкенд", en: "Backend" }, v: { ru: "Отдельный домен", en: "Separate domain" } },
+    { k: { ru: "База", en: "DB" }, v: { ru: "67k моделей камер", en: "67k camera models" } },
   ],
   links: { site: "gostrix.github.io" },
 } as const;
@@ -63,7 +69,14 @@ export function GostrixProject({ lang }: GostrixProjectProps) {
           </h2>
 
           <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-white/85 sm:text-2xl">
-            {COPY.tagline[lang]}
+            {COPY.taglineBefore[lang]}
+            <a
+              href="#strix"
+              className="text-violet-300 underline decoration-violet-300/40 underline-offset-4 transition hover:text-violet-200 hover:decoration-violet-200"
+            >
+              Strix
+            </a>
+            {COPY.taglineAfter[lang]}
           </p>
         </motion.div>
 

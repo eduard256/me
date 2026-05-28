@@ -24,8 +24,8 @@ const COPY = {
   kicker: { ru: "16 · Клиент · Приватный · → hw", en: "16 · Client · Private · → hw" },
   title: { ru: "Журнал переводов", en: "Translation Journal" },
   tagline: {
-    ru: "Заказной инструмент для репетитора. AI читает русскую домашку и английский перевод ученика — и за минуту выдаёт пронумерованный разбор ошибок.",
-    en: "Custom tool for an English tutor. AI reads the Russian source and the student's translation — and returns a numbered breakdown in under a minute.",
+    ru: "Заказной инструмент для репетитора. AI читает русскую домашку и английский перевод ученика — и за 25 секунд выдаёт пронумерованный разбор ошибок.",
+    en: "Custom tool for an English tutor. AI reads the Russian source and the student's translation — and returns a numbered breakdown in 25 seconds.",
   },
   evolution: {
     head: { ru: "Как вырос", en: "How it evolved" },
@@ -113,8 +113,6 @@ export function DzProject({ lang }: DzProjectProps) {
           </p>
         </motion.div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

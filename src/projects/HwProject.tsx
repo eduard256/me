@@ -31,8 +31,8 @@ const COPY = {
   evolution: {
     head: { ru: "Вырос из", en: "Grew out of" },
     body: {
-      ru: "dz — приватная заказная версия v1. hw — v2: уроки, ссылки, прогресс, подписки. Двое репетиторов уже платят.",
-      en: "dz — the v1 private tool. hw — v2: lessons, links, progress, subscriptions. Two paying tutors so far.",
+      ru: "dz — приватная заказная версия v1. hw — v2: уроки, ссылки, прогресс.",
+      en: "dz — the v1 private tool. hw — v2: lessons, links, progress.",
     },
   },
   progress: { value: "21%", label: { ru: "5 из 24", en: "5 of 24" } },
@@ -139,8 +139,6 @@ export function HwProject({ lang }: HwProjectProps) {
           </p>
         </motion.div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

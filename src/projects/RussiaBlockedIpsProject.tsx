@@ -21,13 +21,16 @@ const COPY = {
     ru: "Регулярно обновляемый список CIDR из 146 источников и кросс-платформенный клиент-демон для роутера.",
     en: "A regularly updated CIDR list from 146 sources, plus a cross-platform daemon for routers.",
   },
-  big: "44 148",
-  bigLabel: { ru: "CIDR-блоков в свежем релизе", en: "CIDR blocks in the latest release" },
+  big: "401 874 816",
+  bigLabel: {
+    ru: "IPv4-адресов",
+    en: "IPv4 addresses",
+  },
   pillars: [
+    { v: "44 148", k: { ru: "CIDR-блоков", en: "CIDR blocks" } },
     { v: "146", k: { ru: "источников", en: "sources" } },
     { v: "9.4%", k: { ru: "IPv4-пространства", en: "of IPv4 space" } },
     { v: "6h", k: { ru: "период обновления", en: "refresh cadence" } },
-    { v: "8", k: { ru: "платформ для клиента", en: "client platforms" } },
   ],
   links: { github: "github.com/eduard256/russia-blocked-ips" },
 } as const;

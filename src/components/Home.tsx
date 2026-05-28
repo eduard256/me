@@ -57,21 +57,21 @@ export function Home({ lang }: { lang: Lang }) {
       <PixelGridProject lang={lang} />
       <FlowparxProject lang={lang} />
       <GostrixProject lang={lang} />
+      <Claudecode2apiProject lang={lang} />
+      <RussiaBlockedIpsProject lang={lang} />
+      <BambooTunnelProject lang={lang} />
+      <TextProject lang={lang} />
+      <DzProject lang={lang} />
+      <HwProject lang={lang} />
       <TheMedProject lang={lang} />
       <PalubaProject lang={lang} />
       <YagopereProject lang={lang} />
       <VectorProject lang={lang} />
-      <DzProject lang={lang} />
-      <HwProject lang={lang} />
       <CamWebawebaProject lang={lang} />
       <FrinklipProject lang={lang} />
-      <TextProject lang={lang} />
       <McpOpenaiImagesAudioProject lang={lang} />
 
       {/* Text-only infrastructure tail */}
-      <Claudecode2apiProject lang={lang} />
-      <BambooTunnelProject lang={lang} />
-      <RussiaBlockedIpsProject lang={lang} />
       <McpJsProject lang={lang} />
       <MqttMcpServerProject lang={lang} />
     </main>
