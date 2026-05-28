@@ -24,25 +24,9 @@ const COPY = {
   kicker: { ru: "12 · Клиент · Крым", en: "12 · Client · Crimea" },
   title: { ru: "Ягопере", en: "Yagopere" },
   tagline: {
-    ru: "Сайт-витрина крымского семейного хозяйства. Ягоды, фрукты, орехи, саженцы, перепелиная продукция.",
-    en: "Storefront for a Crimean family farm. Berries, fruit, nuts, saplings, quail products.",
+    ru: "Сайт-витрина крымского семейного хозяйства.",
+    en: "Storefront for a Crimean family farm.",
   },
-  cats: [
-    { icon: "🫐", ru: "Ягоды", en: "Berries" },
-    { icon: "🍑", ru: "Фрукты", en: "Fruit" },
-    { icon: "🥜", ru: "Орехи", en: "Nuts" },
-    { icon: "🌱", ru: "Саженцы", en: "Saplings" },
-    { icon: "🐦", ru: "Птица", en: "Poultry" },
-  ],
-  shotCaption: {
-    ru: "Каталог по сезону 2025. Заказ — в Telegram.",
-    en: "2025 season catalogue. Orders go through Telegram.",
-  },
-  facts: [
-    { k: { ru: "Сбор", en: "Picking" }, v: { ru: "100% вручную", en: "100% by hand" } },
-    { k: { ru: "Локаций", en: "Locations" }, v: { ru: "3 точки в Крыму", en: "3 in Crimea" } },
-    { k: { ru: "Заказ", en: "Order via" }, v: { ru: "Telegram", en: "Telegram" } },
-  ],
   links: { site: "yagopere.webaweba.com" },
 } as const;
 
@@ -80,28 +64,8 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
           </p>
         </motion.div>
 
-        {/* Category pictogram strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-12% 0px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 grid grid-cols-5 gap-2 border-y border-[#3b1f2b]/20 py-8 text-center sm:gap-8"
-        >
-          {COPY.cats.map((c) => (
-            <div key={c.icon}>
-              <div className="text-3xl sm:text-5xl" aria-hidden>
-                {c.icon}
-              </div>
-              <div className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/70 sm:text-sm">
-                {c[lang]}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
         {/* Screenshot */}
-        <div className="mt-20 sm:mt-28">
+        <div className="mt-16 sm:mt-24">
           <Media
             kind="image"
             src={HERO.src}
@@ -112,39 +76,10 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
             index={0}
             className="rounded-md ring-1 ring-[#3b1f2b]/15 shadow-[0_50px_120px_-40px_rgba(59,31,43,0.35)]"
           />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#3b1f2b]/85 sm:text-2xl"
-          >
-            {COPY.shotCaption[lang]}
-          </motion.p>
         </div>
 
-        {/* Facts */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-12% 0px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 grid grid-cols-3 gap-x-6 gap-y-8 border-t border-[#3b1f2b]/20 pt-10"
-        >
-          {COPY.facts.map((f) => (
-            <div key={f.k.ru}>
-              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/55">
-                {f.k[lang]}
-              </div>
-              <div className="mt-3 font-[family-name:var(--font-fraunces)] text-xl leading-tight sm:text-2xl">
-                {f.v[lang]}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
         {/* Link */}
-        <div className="mt-16">
+        <div className="mt-12">
           <a
             href={`https://${COPY.links.site}`}
             target="_blank"
@@ -156,8 +91,6 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
           </a>
         </div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]" />
     </section>
   );
 }

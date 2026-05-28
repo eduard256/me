@@ -64,6 +64,7 @@ export function Home({ lang }: { lang: Lang }) {
       <DzProject lang={lang} />
       <HwProject lang={lang} />
       <MqttMcpServerProject lang={lang} />
+      <McpJsProject lang={lang} />
       <TheMedProject lang={lang} />
       <PalubaProject lang={lang} />
       <YagopereProject lang={lang} />
@@ -71,9 +72,6 @@ export function Home({ lang }: { lang: Lang }) {
       <CamWebawebaProject lang={lang} />
       <FrinklipProject lang={lang} />
       <McpOpenaiImagesAudioProject lang={lang} />
-
-      {/* Text-only infrastructure tail */}
-      <McpJsProject lang={lang} />
     </main>
   );
 }
