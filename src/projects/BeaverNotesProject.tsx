@@ -28,18 +28,18 @@ const COPY = {
   kicker: { ru: "06 · Open source · Self-hosted", en: "06 · Open source · Self-hosted" },
   title: { ru: "Beaver Notes", en: "Beaver Notes" },
   tagline: {
-    ru: "Saved Messages, которому можно доверять. Один сервер на семью, файлы до 40 ГБ, нативные клиенты на iOS / iPadOS / macOS.",
-    en: "A Saved Messages you can actually trust. One server per family, 40 GB files, native iOS / iPadOS / macOS clients.",
+    ru: "Saved Messages, которому можно доверять. Сервер на Go с веб-клиентом и PWA, плюс нативное приложение на SwiftUI для iOS / iPadOS / macOS.",
+    en: "A Saved Messages you can actually trust. A Go server with a web client and PWA, plus a native SwiftUI app for iOS / iPadOS / macOS.",
   },
   pillars: [
-    { k: { ru: "Платформы", en: "Platforms" }, v: { ru: "Web + iOS + iPadOS + macOS", en: "Web + iOS + iPadOS + macOS" } },
+    { k: { ru: "Сервер", en: "Server" }, v: { ru: "Go · web · PWA", en: "Go · web · PWA" } },
+    { k: { ru: "Нативно", en: "Native" }, v: { ru: "SwiftUI · iOS · iPadOS · macOS", en: "SwiftUI · iOS · iPadOS · macOS" } },
     { k: { ru: "Файлы", en: "Files" }, v: { ru: "До 40 ГБ", en: "Up to 40 GB" } },
-    { k: { ru: "Поиск", en: "Search" }, v: { ru: "SQLite FTS5, фильтры по типам", en: "SQLite FTS5, type filters" } },
-    { k: { ru: "MCP", en: "MCP" }, v: { ru: "Claude может читать и писать", en: "Claude can read and write" } },
+    { k: { ru: "MCP", en: "MCP" }, v: { ru: "Claude читает и пишет", en: "Claude reads and writes" } },
   ],
   devicesCaption: {
-    ru: "Один markdown, три экрана, одна семейная база.",
-    en: "One markdown, three screens, one family vault.",
+    ru: "Нативное приложение на SwiftUI: один markdown, три экрана.",
+    en: "Native SwiftUI app: one markdown, three screens.",
   },
   webCaption: {
     ru: "И веб-PWA, если телефон не под рукой.",

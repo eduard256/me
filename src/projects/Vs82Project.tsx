@@ -101,7 +101,7 @@ const COPY = {
     rows: [
       {
         k: { ru: "Цена", en: "Price" },
-        v: "350 000 ₽",
+        v: "$3 900",
       },
       {
         k: { ru: "Срок", en: "Timeline" },
@@ -313,12 +313,6 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           </a>
         </motion.div>
       </div>
-
-      {/* Fade-out to the next project. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-b from-transparent to-[#050505]"
-      />
     </section>
   );
 }

@@ -47,12 +47,12 @@ export function Home({ lang }: { lang: Lang }) {
       <StrixProject lang={lang} />
       <Vs82Project lang={lang} />
       <MeetProject lang={lang} />
+      <BeaverNotesProject lang={lang} />
+      <VastProject lang={lang} />
       <ImgableProject lang={lang} />
       <TheMedProject lang={lang} />
-      <BeaverNotesProject lang={lang} />
       <PalubaProject lang={lang} />
       <SkycraftProject lang={lang} />
-      <VastProject lang={lang} />
       <FlowparxProject lang={lang} />
       <JamperhubProject lang={lang} />
       <YagopereProject lang={lang} />

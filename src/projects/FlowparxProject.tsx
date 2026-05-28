@@ -12,7 +12,7 @@ import type { Lang } from "@/lib/i18n";
  * Visual identity:
  *   - Sunset-water gradient lifted from the client's own hero shot.
  *   - One huge image-first composition: the screenshot owns the page, with
- *     a single "1 DAY · 72 000 ₽" badge that brags about the speed/price.
+ *     a single "1 DAY · $800" badge that brags about the speed/price.
  *   - Italic Fraunces "под ключ" mirrors the headline on the live site.
  */
 
@@ -28,7 +28,7 @@ const COPY = {
     ru: "Имиджевый сайт ООО «ФЛОУ». Один день, срочный заказ.",
     en: "Imagework for ООО «ФЛОУ». One day, rush brief.",
   },
-  badge: { ru: "1 день · 72 000 ₽", en: "1 day · 72 000 ₽" },
+  badge: { ru: "1 день · $800", en: "1 day · $800" },
   facts: [
     { k: { ru: "Объекты", en: "Projects" }, v: { ru: "Подмосковье · Крым · Геленджик", en: "Moscow · Crimea · Gelendzhik" } },
     { k: { ru: "Партнёры", en: "Partners" }, v: "RIXEN · UNIT · SPIN" },

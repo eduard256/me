@@ -29,9 +29,9 @@ const COPY = {
   },
   compare: {
     head: { ru: "Например, 80 камер", en: "Example, 80 cameras" },
-    left: { k: { ru: "Замена камер", en: "Replace cameras" }, v: "960 000 ₽" },
-    right: { k: { ru: "webaweba", en: "webaweba" }, v: "204 000 ₽" },
-    save: { k: { ru: "Экономия", en: "Savings" }, v: "756 000 ₽" },
+    left: { k: { ru: "Замена камер", en: "Replace cameras" }, v: "$10 700" },
+    right: { k: { ru: "webaweba", en: "webaweba" }, v: "$2 300" },
+    save: { k: { ru: "Экономия", en: "Savings" }, v: "$8 400" },
   },
   stack: {
     head: { ru: "На чём построено", en: "What runs under it" },

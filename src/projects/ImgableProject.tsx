@@ -31,36 +31,30 @@ interface ImgableProjectProps {
 }
 
 const COPY = {
-  kicker: { ru: "03 · Open source · Go + Python + TS", en: "03 · Open source · Go + Python + TS" },
+  kicker: { ru: "03 · Демонстрация навыка · Go + Python + TS", en: "03 · Skill demo · Go + Python + TS" },
   title: { ru: "imgable", en: "imgable" },
   tagline: {
-    ru: "Внешне — милашка. Внутри — пять микросервисов, локальный AI и 49 фото в секунду.",
-    en: "Cute on the outside. Five microservices, local AI and 49 photos/second underneath.",
+    ru: "Своя фото-галерея в духе Nextcloud и Immich. Каждое фото проходит предобработку и оптимизацию в один универсальный формат, чтобы лента листалась мгновенно.",
+    en: "A self-hosted photo gallery in the spirit of Nextcloud and Immich. Every photo is pre-processed and optimised into one universal format so the feed scrolls instantly.",
+  },
+  note: {
+    ru: "Масштабный проект как демонстрация навыка, а не продукт для прода.",
+    en: "A large project built to demonstrate skill, not a production product.",
   },
   facts: [
     { k: { ru: "Сервисов", en: "Services" }, v: "5" },
     { k: { ru: "Языков", en: "Languages" }, v: "3" },
-    { k: { ru: "Фото/сек", en: "Photos/sec" }, v: "49" },
-    { k: { ru: "ImageNet", en: "ImageNet" }, v: { ru: "32 000 за 11 мин", en: "32 000 in 11 min" } },
+    { k: { ru: "Конвейер", en: "Pipeline" }, v: { ru: "Всё → WebP", en: "Everything → WebP" } },
+    { k: { ru: "Скорость", en: "Throughput" }, v: { ru: "49 фото/сек", en: "49 photos/sec" } },
   ],
-  videoCaption: {
-    ru: "Скролл, открытие, лица, теги, GPS — всё локально.",
-    en: "Scroll, open, faces, tags, GPS — all local.",
-  },
   shotCaption: {
-    ru: "Один пароль на семью. Никаких ролей, никаких облаков.",
-    en: "One password for the whole family. No roles, no clouds.",
+    ru: "Альтернатива Nextcloud и Immich. Локальный AI, без облаков.",
+    en: "An alternative to Nextcloud and Immich. Local AI, no clouds.",
   },
-  stripCaptions: [
-    { ru: "Альбомы и папки.", en: "Albums and folders." },
-    { ru: "Лица из CLIP-эмбеддингов.", en: "Faces from CLIP embeddings." },
-    { ru: "Карта по GPS из EXIF.", en: "GPS map from EXIF." },
-  ],
   links: { github: "github.com/eduard256/imgable" },
 } as const;
 
 const MEDIA = {
-  video: { src: "/assets/imgable/demo.mp4", w: 860, h: 656 },
   hero: { src: "/assets/imgable/01.webp", w: 2880, h: 1628 },
   strip: [
     { src: "/assets/imgable/02.webp", w: 2880, h: 1628 },
@@ -70,7 +64,6 @@ const MEDIA = {
 };
 
 const GALLERY: LightboxItem[] = [
-  { kind: "video", src: MEDIA.video.src, width: MEDIA.video.w, height: MEDIA.video.h },
   { kind: "image", src: MEDIA.hero.src, alt: "imgable gallery", width: MEDIA.hero.w, height: MEDIA.hero.h },
   ...MEDIA.strip.map((s, i) => ({
     kind: "image" as const,
@@ -129,6 +122,9 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
           <p className="mt-6 max-w-[680px] text-xl leading-snug text-[#0d0d10]/80 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
+          <p className="mt-4 max-w-[560px] font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#0d0d10]/55 sm:text-sm">
+            {COPY.note[lang]}
+          </p>
         </motion.div>
 
         {/* Facts row */}
@@ -151,20 +147,6 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
           ))}
         </motion.div>
 
-        {/* Video */}
-        <div className="mt-20 sm:mt-28">
-          <Media
-            kind="video"
-            src={MEDIA.video.src}
-            width={MEDIA.video.w}
-            height={MEDIA.video.h}
-            gallery={GALLERY}
-            index={0}
-            className="rounded-2xl ring-1 ring-[#0d0d10]/10 shadow-[0_40px_120px_-40px_rgba(124,77,255,0.35)]"
-          />
-          <Caption text={COPY.videoCaption[lang]} className="mt-6" />
-        </div>
-
         {/* Hero screenshot */}
         <div className="mt-20 sm:mt-28">
           <Media
@@ -174,7 +156,7 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
             width={MEDIA.hero.w}
             height={MEDIA.hero.h}
             gallery={GALLERY}
-            index={1}
+            index={0}
             className="rounded-2xl ring-1 ring-[#0d0d10]/10 shadow-[0_50px_140px_-50px_rgba(13,13,16,0.45)]"
           />
           <Caption text={COPY.shotCaption[lang]} className="mt-6" />
@@ -197,12 +179,9 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
                 width={s.w}
                 height={s.h}
                 gallery={GALLERY}
-                index={i + 2}
+                index={i + 1}
                 className="rounded-xl ring-1 ring-[#0d0d10]/10 shadow-[0_30px_70px_-30px_rgba(13,13,16,0.3)]"
               />
-              <p className="mt-4 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#0d0d10]/60">
-                {COPY.stripCaptions[i][lang]}
-              </p>
             </motion.div>
           ))}
         </div>
