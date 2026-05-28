@@ -96,7 +96,7 @@ export function Hero({ lang }: HeroProps) {
           className="flex items-baseline justify-between"
         >
           <span
-            className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/55"
+            className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/55"
           >
             me.webaweba.com
           </span>
@@ -113,7 +113,7 @@ export function Hero({ lang }: HeroProps) {
               ease: [0.16, 1, 0.3, 1],
               delay: 0.1,
             }}
-            className="font-[var(--font-fraunces)] text-[16vw] leading-[0.88] font-light tracking-[-0.045em] sm:text-[13vw] lg:text-[180px]"
+            className="font-[family-name:var(--font-fraunces)] text-[16vw] leading-[0.88] font-light tracking-[-0.045em] sm:text-[13vw] lg:text-[180px]"
             style={{ fontFeatureSettings: '"ss01", "ss02", "liga"' }}
           >
             eduard
@@ -197,10 +197,10 @@ function HeroTile({ src, alt }: { src: string; alt: string }) {
 function Metric({ value, label }: { value: string; label: string }) {
   return (
     <span className="flex items-baseline gap-2">
-      <span className="font-[var(--font-jetbrains)] text-2xl tabular-nums text-white sm:text-3xl lg:text-4xl">
+      <span className="font-[family-name:var(--font-jetbrains)] text-2xl tabular-nums text-white sm:text-3xl lg:text-4xl">
         {value}
       </span>
-      <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-white/55 sm:text-sm">
+      <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-white/55 sm:text-sm">
         {label}
       </span>
     </span>
@@ -222,7 +222,7 @@ function ContactPill({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group relative inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 font-[var(--font-jetbrains)] text-sm tracking-wide text-white/90 backdrop-blur transition hover:border-white/40 hover:bg-white/[0.08]"
+      className="group relative inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 font-[family-name:var(--font-jetbrains)] text-sm tracking-wide text-white/90 backdrop-blur transition hover:border-white/40 hover:bg-white/[0.08]"
     >
       <span>{label}</span>
       <span
@@ -237,7 +237,7 @@ function ContactPill({ href, label }: { href: string; label: string }) {
 
 function ScrollHint({ lang }: { lang: Lang }) {
   return (
-    <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/40">
+    <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/40">
       <span>{lang === "ru" ? "Скролл" : "Scroll"}</span>
       <span aria-hidden className="block h-px w-10 bg-white/30" />
     </div>
@@ -247,7 +247,7 @@ function ScrollHint({ lang }: { lang: Lang }) {
 function LangSwitch({ lang }: { lang: Lang }) {
   // Both sides are statically generated, so plain anchors work.
   return (
-    <div className="flex items-center gap-1 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.25em]">
+    <div className="flex items-center gap-1 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.25em]">
       <a
         href="/"
         className={

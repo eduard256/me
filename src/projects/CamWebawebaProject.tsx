@@ -72,7 +72,7 @@ export function CamWebawebaProject({ lang }: CamWebawebaProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#a896ff]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#a896ff]">
             <span aria-hidden className="h-px w-10 bg-[#a896ff]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
@@ -112,7 +112,7 @@ export function CamWebawebaProject({ lang }: CamWebawebaProjectProps) {
           <Cmp k={COPY.compare.right.k[lang]} v={COPY.compare.right.v} />
           <Cmp k={COPY.compare.save.k[lang]} v={COPY.compare.save.v} accent />
         </motion.div>
-        <div className="mt-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ede9ff]/45">
+        <div className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ede9ff]/45">
           {COPY.compare.head[lang]}
         </div>
 
@@ -124,14 +124,14 @@ export function CamWebawebaProject({ lang }: CamWebawebaProjectProps) {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16"
         >
-          <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#a896ff]">
+          <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#a896ff]">
             {COPY.stack.head[lang]}
           </div>
           <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-4 text-2xl text-[#ede9ff]/90 sm:text-3xl">
             {COPY.stack.items.map((s) => (
               <li key={s.name} className="flex items-baseline gap-3">
-                <span className="font-[var(--font-fraunces)] italic">{s.name}</span>
-                <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#ede9ff]/55">
+                <span className="font-[family-name:var(--font-fraunces)] italic">{s.name}</span>
+                <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#ede9ff]/55">
                   · {s.note[lang]}
                 </span>
               </li>
@@ -156,7 +156,7 @@ export function CamWebawebaProject({ lang }: CamWebawebaProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-instrument)] text-xl italic text-[#ede9ff]/85 sm:text-2xl"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#ede9ff]/85 sm:text-2xl"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -167,7 +167,7 @@ export function CamWebawebaProject({ lang }: CamWebawebaProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#a896ff] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0d0a17] transition hover:bg-white"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#a896ff] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0d0a17] transition hover:bg-white"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
@@ -193,11 +193,11 @@ function Cmp({
 }) {
   return (
     <div className={dim ? "opacity-60" : ""}>
-      <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ede9ff]/55">
+      <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ede9ff]/55">
         {k}
       </div>
       <div
-        className={`mt-3 font-[var(--font-inter-tight)] text-4xl leading-tight tabular-nums sm:text-5xl ${
+        className={`mt-3 font-[family-name:var(--font-inter-tight)] text-4xl leading-tight tabular-nums sm:text-5xl ${
           accent ? "text-[#a896ff]" : "text-[#ede9ff]"
         } ${dim ? "line-through decoration-[#ede9ff]/40" : ""}`}
       >

@@ -66,7 +66,7 @@ export function TextProject({ lang }: TextProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#d6dadd]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[720px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#d6dadd]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>

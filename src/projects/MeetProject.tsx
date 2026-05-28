@@ -109,19 +109,19 @@ export function MeetProject({ lang }: MeetProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/55">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/55">
             <span aria-hidden className="block h-2 w-2 animate-pulse rounded-full bg-[#ff3b3b]" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 flex items-baseline gap-3 font-[var(--font-space-grotesk)] text-[18vw] leading-[0.86] font-medium tracking-[-0.04em] sm:text-[13vw] lg:text-[200px]">
+          <h2 className="mt-6 flex items-baseline gap-3 font-[family-name:var(--font-space-grotesk)] text-[18vw] leading-[0.86] font-medium tracking-[-0.04em] sm:text-[13vw] lg:text-[200px]">
             <span>{COPY.title[lang]}</span>
             <span className="text-[#ff3b3b]" aria-hidden>
               _
             </span>
           </h2>
 
-          <div className="mt-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-white/65">
+          <div className="mt-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-white/65">
             {COPY.subtitle[lang]}
           </div>
 
@@ -141,13 +141,13 @@ export function MeetProject({ lang }: MeetProjectProps) {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: i * 0.05 }}
               className="group flex flex-col gap-1 border-b border-white/10 py-5 sm:flex-row sm:items-baseline sm:gap-8"
             >
-              <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/35 sm:w-12 sm:flex-none">
+              <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-white/35 sm:w-12 sm:flex-none">
                 {s.no}
               </span>
-              <span className="font-[var(--font-space-grotesk)] text-xl font-medium text-white sm:w-56 sm:flex-none sm:text-2xl">
+              <span className="font-[family-name:var(--font-space-grotesk)] text-xl font-medium text-white sm:w-56 sm:flex-none sm:text-2xl">
                 {typeof s.name === "string" ? s.name : s.name[lang]}
               </span>
-              <span className="flex-1 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-white/60 sm:text-sm">
+              <span className="flex-1 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-white/60 sm:text-sm">
                 {s.stack}
               </span>
               <span className="text-sm text-white/55 sm:w-72 sm:flex-none sm:text-base">
@@ -167,7 +167,7 @@ export function MeetProject({ lang }: MeetProjectProps) {
         >
           {COPY.hardLines.map((h) => (
             <div key={h.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/45">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/45">
                 {h.k[lang]}
               </div>
               <div className="mt-2 text-lg leading-snug text-white sm:text-xl">
@@ -194,7 +194,7 @@ export function MeetProject({ lang }: MeetProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-white/65"
+            className="mt-5 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-white/65"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -212,7 +212,7 @@ export function MeetProject({ lang }: MeetProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#ff3b3b] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-black transition hover:bg-white"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#ff3b3b] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-black transition hover:bg-white"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
@@ -221,7 +221,7 @@ export function MeetProject({ lang }: MeetProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-white/25 px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white/85 transition hover:border-white hover:bg-white hover:text-black"
+            className="rounded-full border border-white/25 px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white/85 transition hover:border-white hover:bg-white hover:text-black"
           >
             {COPY.links.github}
           </a>

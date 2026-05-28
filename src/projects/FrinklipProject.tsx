@@ -64,7 +64,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0f2a1e]/65">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0f2a1e]/65">
             <span aria-hidden className="h-px w-10 bg-[#0f2a1e]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
@@ -73,7 +73,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#0f2a1e]/80 sm:text-2xl">
+          <p className="mt-6 max-w-[720px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#0f2a1e]/80 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -91,13 +91,13 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
               index={0}
               className="rounded-xl ring-1 ring-[#0f2a1e]/15 shadow-[0_30px_70px_-30px_rgba(15,42,30,0.3)]"
             />
-            <p className="mt-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/65">
+            <p className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/65">
               {COPY.captionLeft[lang]}
             </p>
           </div>
 
           <div
-            className="text-center font-[var(--font-space-grotesk)] text-5xl font-medium text-[#0f2a1e] sm:text-7xl"
+            className="text-center font-[family-name:var(--font-space-grotesk)] text-5xl font-medium text-[#0f2a1e] sm:text-7xl"
             aria-hidden
           >
             →
@@ -114,7 +114,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
               index={1}
               className="rounded-xl ring-1 ring-[#0f2a1e]/15 shadow-[0_30px_70px_-30px_rgba(15,42,30,0.3)]"
             />
-            <p className="mt-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/65">
+            <p className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/65">
               {COPY.captionRight[lang]}
             </p>
           </div>
@@ -130,7 +130,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0f2a1e]/55">
                 {f.k[lang]}
               </div>
               <div className="mt-3 text-base leading-snug text-[#0f2a1e] sm:text-lg">
@@ -145,7 +145,7 @@ export function FrinklipProject({ lang }: FrinklipProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#0f2a1e] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#dff2e7] transition hover:bg-[#1f5340]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#0f2a1e] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#dff2e7] transition hover:bg-[#1f5340]"
           >
             <span>{COPY.links.github}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

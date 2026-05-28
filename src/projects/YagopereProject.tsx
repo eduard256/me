@@ -66,16 +66,16 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#3b1f2b]/65">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#3b1f2b]/65">
             <span aria-hidden className="h-px w-10 bg-[#3b1f2b]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-fraunces)] text-[18vw] leading-[0.9] font-light tracking-[-0.02em] text-[#5b1e2e] sm:text-[13vw] lg:text-[200px]">
+          <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[18vw] leading-[0.9] font-light tracking-[-0.02em] text-[#5b1e2e] sm:text-[13vw] lg:text-[200px]">
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[660px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#3b1f2b]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[660px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#3b1f2b]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -93,7 +93,7 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
               <div className="text-3xl sm:text-5xl" aria-hidden>
                 {c.icon}
               </div>
-              <div className="mt-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/70 sm:text-sm">
+              <div className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/70 sm:text-sm">
                 {c[lang]}
               </div>
             </div>
@@ -117,7 +117,7 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-instrument)] text-xl italic text-[#3b1f2b]/85 sm:text-2xl"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#3b1f2b]/85 sm:text-2xl"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -133,10 +133,10 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#3b1f2b]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-fraunces)] text-xl leading-tight sm:text-2xl">
+              <div className="mt-3 font-[family-name:var(--font-fraunces)] text-xl leading-tight sm:text-2xl">
                 {f.v[lang]}
               </div>
             </div>
@@ -149,7 +149,7 @@ export function YagopereProject({ lang }: YagopereProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#5b1e2e] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#fbf3e5] transition hover:bg-[#3b1f2b]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#5b1e2e] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#fbf3e5] transition hover:bg-[#3b1f2b]"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

@@ -61,20 +61,20 @@ export function HwProject({ lang }: HwProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#231a12]/65">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#231a12]/65">
             <span aria-hidden className="h-px w-10 bg-[#231a12]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-fraunces)] text-[22vw] leading-[0.85] font-light tracking-[-0.04em] sm:text-[18vw] lg:text-[260px]">
+          <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[22vw] leading-[0.85] font-light tracking-[-0.04em] sm:text-[18vw] lg:text-[260px]">
             {COPY.title[lang]}
           </h2>
 
-          <div className="mt-3 font-[var(--font-fraunces)] text-2xl italic text-[#231a12]/80 sm:text-3xl">
+          <div className="mt-3 font-[family-name:var(--font-fraunces)] text-2xl italic text-[#231a12]/80 sm:text-3xl">
             {COPY.subtitle[lang]}
           </div>
 
-          <p className="mt-8 max-w-[700px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#231a12]/85 sm:text-2xl">
+          <p className="mt-8 max-w-[700px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#231a12]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -87,14 +87,14 @@ export function HwProject({ lang }: HwProjectProps) {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 flex items-baseline gap-5 border-t border-[#231a12]/20 pt-10"
         >
-          <div className="font-[var(--font-fraunces)] text-[20vw] leading-[0.85] tabular-nums sm:text-[14vw] lg:text-[180px]">
+          <div className="font-[family-name:var(--font-fraunces)] text-[20vw] leading-[0.85] tabular-nums sm:text-[14vw] lg:text-[180px]">
             {COPY.progress.value}
           </div>
           <div>
-            <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#231a12]/55">
+            <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#231a12]/55">
               {lang === "ru" ? "Прогресс ученика" : "Student progress"}
             </div>
-            <div className="mt-1 font-[var(--font-fraunces)] text-lg italic">
+            <div className="mt-1 font-[family-name:var(--font-fraunces)] text-lg italic">
               {COPY.progress.label[lang]}
             </div>
           </div>
@@ -117,7 +117,7 @@ export function HwProject({ lang }: HwProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#231a12]/70"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#231a12]/70"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -131,10 +131,10 @@ export function HwProject({ lang }: HwProjectProps) {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 max-w-[720px] border-l-2 border-[#231a12]/60 pl-6"
         >
-          <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a12]/70">
+          <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a12]/70">
             {COPY.evolution.head[lang]}
           </div>
-          <p className="mt-4 font-[var(--font-fraunces)] text-2xl italic leading-snug sm:text-3xl">
+          <p className="mt-4 font-[family-name:var(--font-fraunces)] text-2xl italic leading-snug sm:text-3xl">
             {COPY.evolution.body[lang]}
           </p>
         </motion.div>

@@ -88,12 +88,12 @@ export function VastProject({ lang }: VastProjectProps) {
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-jetbrains)] text-[20vw] leading-[0.86] font-light tracking-[-0.05em] sm:text-[14vw] lg:text-[220px]">
+          <h2 className="mt-6 font-[family-name:var(--font-jetbrains)] text-[20vw] leading-[0.86] font-light tracking-[-0.05em] sm:text-[14vw] lg:text-[220px]">
             {COPY.title}
             <span className="text-[#9ed28f]">.</span>
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#e8f0f7]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#e8f0f7]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -106,10 +106,10 @@ export function VastProject({ lang }: VastProjectProps) {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16"
         >
-          <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#e8f0f7]/55">
+          <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#e8f0f7]/55">
             {lang === "ru" ? "Заменяет" : "Replaces"}
           </div>
-          <ul className="mt-5 flex flex-wrap items-baseline gap-x-6 gap-y-3 font-[var(--font-inter-tight)] text-3xl leading-none text-[#e8f0f7]/70 sm:gap-x-8 sm:text-5xl">
+          <ul className="mt-5 flex flex-wrap items-baseline gap-x-6 gap-y-3 font-[family-name:var(--font-inter-tight)] text-3xl leading-none text-[#e8f0f7]/70 sm:gap-x-8 sm:text-5xl">
             {COPY.replaces.map((r, i) => (
               <li key={r} className="flex items-baseline gap-6">
                 <span className="line-through decoration-[#9ed28f] decoration-[3px]">{r}</span>
@@ -119,7 +119,7 @@ export function VastProject({ lang }: VastProjectProps) {
               </li>
             ))}
           </ul>
-          <div className="mt-6 font-[var(--font-jetbrains)] text-base uppercase tracking-[0.22em] text-[#9ed28f] sm:text-lg">
+          <div className="mt-6 font-[family-name:var(--font-jetbrains)] text-base uppercase tracking-[0.22em] text-[#9ed28f] sm:text-lg">
             {COPY.with[lang]}
           </div>
         </motion.div>
@@ -137,7 +137,7 @@ export function VastProject({ lang }: VastProjectProps) {
               <div className="text-xs uppercase tracking-[0.22em] text-[#e8f0f7]/45">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-xl leading-snug text-[#e8f0f7] sm:text-2xl">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#e8f0f7] sm:text-2xl">
                 {f.v[lang]}
               </div>
             </div>

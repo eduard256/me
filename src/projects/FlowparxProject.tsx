@@ -58,16 +58,16 @@ export function FlowparxProject({ lang }: FlowparxProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/65">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-white/65">
             <span aria-hidden className="h-px w-10 bg-white/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-inter-tight)] text-[14vw] leading-[0.88] font-light tracking-[-0.04em] sm:text-[10vw] lg:text-[150px]">
+          <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[14vw] leading-[0.88] font-light tracking-[-0.04em] sm:text-[10vw] lg:text-[150px]">
             {COPY.title[lang]}
           </h2>
 
-          <div className="mt-2 font-[var(--font-fraunces)] text-2xl italic text-white/80 sm:text-3xl">
+          <div className="mt-2 font-[family-name:var(--font-fraunces)] text-2xl italic text-white/80 sm:text-3xl">
             <span className="italic">{COPY.subtitle[lang]}</span>
           </div>
 
@@ -94,7 +94,7 @@ export function FlowparxProject({ lang }: FlowparxProjectProps) {
             whileInView={{ opacity: 1, y: 0, rotate: -2 }}
             viewport={{ once: true, margin: "-15% 0px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute -bottom-6 left-4 origin-center rounded-md bg-[#e8a78f] px-5 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a3142] shadow-xl sm:-bottom-8 sm:left-10 sm:px-7 sm:py-4 sm:text-base"
+            className="absolute -bottom-6 left-4 origin-center rounded-md bg-[#e8a78f] px-5 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a3142] shadow-xl sm:-bottom-8 sm:left-10 sm:px-7 sm:py-4 sm:text-base"
           >
             {COPY.badge[lang]}
           </motion.div>
@@ -110,7 +110,7 @@ export function FlowparxProject({ lang }: FlowparxProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/65">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/65">
                 {f.k[lang]}
               </div>
               <div className="mt-3 text-lg leading-snug text-white sm:text-xl">
@@ -126,7 +126,7 @@ export function FlowparxProject({ lang }: FlowparxProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a3142] transition hover:bg-[#e8a78f]"
+            className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a3142] transition hover:bg-[#e8a78f]"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

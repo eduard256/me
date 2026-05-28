@@ -87,13 +87,13 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f3eee6]/55">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f3eee6]/55">
             <span aria-hidden className="block h-2 w-2 animate-pulse rounded-full bg-[#ef3a3a]" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
           <h2
-            className="mt-6 font-[var(--font-space-grotesk)] text-[16vw] leading-[0.88] font-medium tracking-[-0.045em] sm:text-[12vw] lg:text-[180px]"
+            className="mt-6 font-[family-name:var(--font-space-grotesk)] text-[16vw] leading-[0.88] font-medium tracking-[-0.045em] sm:text-[12vw] lg:text-[180px]"
             style={{ transform: "rotate(-1.2deg)", transformOrigin: "0 100%" }}
           >
             Sky&nbsp;
@@ -107,7 +107,7 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 max-w-[800px] border-l-2 border-[#ef3a3a] pl-6 font-[var(--font-instrument)] text-2xl italic leading-snug text-[#f3eee6]/90 sm:mt-20 sm:text-3xl lg:text-4xl"
+          className="mt-14 max-w-[800px] border-l-2 border-[#ef3a3a] pl-6 font-[family-name:var(--font-instrument)] text-2xl italic leading-snug text-[#f3eee6]/90 sm:mt-20 sm:text-3xl lg:text-4xl"
         >
           {COPY.quote[lang]}
         </motion.blockquote>
@@ -122,10 +122,10 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/50">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-white/50">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-space-grotesk)] text-2xl font-medium leading-tight sm:text-3xl">
+              <div className="mt-3 font-[family-name:var(--font-space-grotesk)] text-2xl font-medium leading-tight sm:text-3xl">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>
@@ -148,7 +148,7 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-white/65"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-white/65"
           >
             {COPY.videoCaption[lang]}
           </motion.p>
@@ -162,10 +162,10 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-20 grid items-start gap-10 sm:mt-28 sm:grid-cols-[1fr_2fr]"
         >
-          <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#ef3a3a]">
+          <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#ef3a3a]">
             {COPY.reallyWorks.head[lang]}
           </div>
-          <ul className="space-y-3 font-[var(--font-space-grotesk)] text-2xl text-white/85 sm:text-3xl">
+          <ul className="space-y-3 font-[family-name:var(--font-space-grotesk)] text-2xl text-white/85 sm:text-3xl">
             {COPY.reallyWorks.items.map((item) => (
               <li key={item.ru} className="flex items-baseline gap-4">
                 <span aria-hidden className="text-[#ef3a3a]">✓</span>
@@ -181,7 +181,7 @@ export function SkycraftProject({ lang }: SkycraftProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/30 px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white/90 transition hover:border-[#ef3a3a] hover:bg-[#ef3a3a] hover:text-black"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/30 px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white/90 transition hover:border-[#ef3a3a] hover:bg-[#ef3a3a] hover:text-black"
           >
             <span>{COPY.links.github}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

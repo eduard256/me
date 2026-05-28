@@ -91,18 +91,18 @@ export function TheZoltoProject({ lang }: TheZoltoProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#c69845]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#c69845]">
             <span aria-hidden className="h-px w-10 bg-[#c69845]/50" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-archivo)] text-[14vw] uppercase leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[180px]">
+          <h2 className="mt-6 font-[family-name:var(--font-archivo)] text-[14vw] uppercase leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[180px]">
             <span className="bg-gradient-to-b from-[#f8e6a8] via-[#d4a64a] to-[#7a5a1f] bg-clip-text text-transparent">
               {COPY.title[lang]}
             </span>
           </h2>
 
-          <p className="mt-6 max-w-[700px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#f6e6a4]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[700px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#f6e6a4]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -117,10 +117,10 @@ export function TheZoltoProject({ lang }: TheZoltoProjectProps) {
         >
           {COPY.rules.map((r, i) => (
             <div key={r.ru} className="flex items-baseline gap-3">
-              <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#c69845]/80">
+              <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#c69845]/80">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-[var(--font-inter-tight)] text-base leading-snug text-[#f6e6a4]/90 sm:text-lg">
+              <span className="font-[family-name:var(--font-inter-tight)] text-base leading-snug text-[#f6e6a4]/90 sm:text-lg">
                 {r[lang]}
               </span>
             </div>
@@ -131,7 +131,7 @@ export function TheZoltoProject({ lang }: TheZoltoProjectProps) {
         <div className="mt-20 grid gap-12 sm:mt-28 sm:grid-cols-2 sm:gap-10">
           {[IOS, TG].map((set, columnIdx) => (
             <div key={columnIdx}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#c69845]">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#c69845]">
                 {COPY.platforms[columnIdx][lang]}
               </div>
               <div className="mt-5 grid grid-cols-3 gap-3 sm:gap-4">
@@ -159,7 +159,7 @@ export function TheZoltoProject({ lang }: TheZoltoProjectProps) {
             href={`https://${COPY.links.bot}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#c69845] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0a0905] transition hover:bg-[#f6e6a4]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#c69845] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0a0905] transition hover:bg-[#f6e6a4]"
           >
             <span>{COPY.links.bot}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

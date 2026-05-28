@@ -59,17 +59,17 @@ export function DzProject({ lang }: DzProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#9b2316]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#9b2316]">
             <span aria-hidden className="h-px w-10 bg-[#9b2316]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-fraunces)] text-[10vw] leading-[0.95] font-light italic tracking-[-0.02em] sm:text-[7vw] lg:text-[110px]">
+          <h2 className="mt-6 font-[family-name:var(--font-fraunces)] text-[10vw] leading-[0.95] font-light italic tracking-[-0.02em] sm:text-[7vw] lg:text-[110px]">
             {COPY.title[lang]}
           </h2>
           <div aria-hidden className="mt-3 h-px w-32 bg-[#9b2316]" />
 
-          <p className="mt-8 max-w-[700px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#1c1812]/85 sm:text-2xl">
+          <p className="mt-8 max-w-[700px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#1c1812]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -91,7 +91,7 @@ export function DzProject({ lang }: DzProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1c1812]/65"
+            className="mt-5 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1c1812]/65"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -105,10 +105,10 @@ export function DzProject({ lang }: DzProjectProps) {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 max-w-[720px] border-l-2 border-[#9b2316] pl-6"
         >
-          <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#9b2316]">
+          <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#9b2316]">
             {COPY.evolution.head[lang]}
           </div>
-          <p className="mt-4 font-[var(--font-fraunces)] text-2xl italic leading-snug sm:text-3xl">
+          <p className="mt-4 font-[family-name:var(--font-fraunces)] text-2xl italic leading-snug sm:text-3xl">
             {COPY.evolution.body[lang]}
           </p>
         </motion.div>

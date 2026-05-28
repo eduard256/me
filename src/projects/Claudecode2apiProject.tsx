@@ -78,7 +78,7 @@ export function Claudecode2apiProject({ lang }: Claudecode2apiProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#d6e0ec]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#d6e0ec]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -129,7 +129,7 @@ export function Claudecode2apiProject({ lang }: Claudecode2apiProjectProps) {
               <div className="text-xs uppercase tracking-[0.22em] text-[#d6e0ec]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-base leading-snug sm:text-lg">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-base leading-snug sm:text-lg">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>

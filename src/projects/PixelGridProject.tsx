@@ -75,12 +75,12 @@ export function PixelGridProject({ lang }: PixelGridProjectProps) {
             <h2 className="text-[12vw] leading-[0.9] font-light tracking-[-0.04em] sm:text-[8vw] lg:text-[110px]">
               {COPY.title}
             </h2>
-            <span className="font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#7c8cd8] sm:text-base">
+            <span className="font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#7c8cd8] sm:text-base">
               TARGET · {COPY.size}
             </span>
           </div>
 
-          <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#dce5ff]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[720px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#dce5ff]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ export function PixelGridProject({ lang }: PixelGridProjectProps) {
               <div className="text-xs uppercase tracking-[0.22em] text-[#dce5ff]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-base leading-snug sm:text-lg">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-base leading-snug sm:text-lg">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>

@@ -69,7 +69,7 @@ export function RussiaBlockedIpsProject({ lang }: RussiaBlockedIpsProjectProps) 
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#f3f3f3]/80 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#f3f3f3]/80 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export function RussiaBlockedIpsProject({ lang }: RussiaBlockedIpsProjectProps) 
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           className="mt-20 sm:mt-28"
         >
-          <div className="font-[var(--font-jetbrains)] text-[32vw] leading-[0.85] font-light tabular-nums tracking-[-0.05em] sm:text-[22vw] lg:text-[300px]">
+          <div className="font-[family-name:var(--font-jetbrains)] text-[32vw] leading-[0.85] font-light tabular-nums tracking-[-0.05em] sm:text-[22vw] lg:text-[300px]">
             {COPY.big}
           </div>
           <div className="mt-4 text-xs uppercase tracking-[0.3em] text-[#f3f3f3]/65">
@@ -100,7 +100,7 @@ export function RussiaBlockedIpsProject({ lang }: RussiaBlockedIpsProjectProps) 
         >
           {COPY.pillars.map((p) => (
             <div key={p.v}>
-              <div className="font-[var(--font-jetbrains)] text-4xl tabular-nums text-white sm:text-5xl">
+              <div className="font-[family-name:var(--font-jetbrains)] text-4xl tabular-nums text-white sm:text-5xl">
                 {p.v}
               </div>
               <div className="mt-2 text-xs uppercase tracking-[0.22em] text-[#f3f3f3]/55">

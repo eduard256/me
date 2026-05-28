@@ -71,7 +71,7 @@ export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjec
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#1c1820]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#1c1820]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ export function McpOpenaiImagesAudioProject({ lang }: McpOpenaiImagesAudioProjec
               <div className="text-xs uppercase tracking-[0.22em] text-[#1c1820]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-lg sm:text-xl">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-lg sm:text-xl">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>

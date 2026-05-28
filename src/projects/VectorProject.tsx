@@ -69,14 +69,14 @@ export function VectorProject({ lang }: VectorProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#5b3fb8]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#5b3fb8]">
             <span aria-hidden className="h-px w-10 bg-[#5b3fb8]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-inter-tight)] text-[12vw] leading-[0.92] font-light tracking-[-0.045em] sm:text-[8vw] lg:text-[120px]">
+          <h2 className="mt-6 font-[family-name:var(--font-inter-tight)] text-[12vw] leading-[0.92] font-light tracking-[-0.045em] sm:text-[8vw] lg:text-[120px]">
             VECTOR{" "}
-            <span className="font-[var(--font-fraunces)] italic text-[#5b3fb8]">
+            <span className="font-[family-name:var(--font-fraunces)] italic text-[#5b3fb8]">
               Academy
             </span>
           </h2>
@@ -96,7 +96,7 @@ export function VectorProject({ lang }: VectorProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#231a3e]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#231a3e]/55">
                 {f.k[lang]}
               </div>
               <div className="mt-3 text-2xl leading-tight text-[#231a3e] sm:text-3xl">
@@ -123,7 +123,7 @@ export function VectorProject({ lang }: VectorProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-instrument)] text-xl italic text-[#231a3e]/80 sm:text-2xl"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#231a3e]/80 sm:text-2xl"
           >
             {COPY.shotCaption[lang]}
           </motion.p>
@@ -135,7 +135,7 @@ export function VectorProject({ lang }: VectorProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#5b3fb8] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white transition hover:bg-[#231a3e]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#5b3fb8] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-white transition hover:bg-[#231a3e]"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

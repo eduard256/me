@@ -91,19 +91,19 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f4ece0]/55">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#f4ece0]/55">
             <span aria-hidden className="h-px w-10 bg-[#f4ece0]/30" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
           <h2
-            className="mt-6 font-[var(--font-fraunces)] text-[14vw] leading-[0.9] font-light italic tracking-[-0.02em] sm:text-[10vw] lg:text-[150px]"
+            className="mt-6 font-[family-name:var(--font-fraunces)] text-[14vw] leading-[0.9] font-light italic tracking-[-0.02em] sm:text-[10vw] lg:text-[150px]"
             style={{ fontFeatureSettings: '"ss01"' }}
           >
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#f4ece0]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#f4ece0]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -118,10 +118,10 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
         >
           {COPY.pillars.map((p) => (
             <div key={p.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/50">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/50">
                 {p.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-fraunces)] text-2xl leading-tight text-[#f4ece0] sm:text-3xl">
+              <div className="mt-3 font-[family-name:var(--font-fraunces)] text-2xl leading-tight text-[#f4ece0] sm:text-3xl">
                 {p.v[lang]}
               </div>
             </div>
@@ -146,7 +146,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
                 index={0}
                 className="rounded-xl ring-1 ring-white/10 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.65)]"
               />
-              <p className="mt-4 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
+              <p className="mt-4 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
                 macOS · 01-wall
               </p>
             </motion.div>
@@ -165,7 +165,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
                 index={1}
                 className="rounded-2xl ring-1 ring-white/10 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.65)]"
               />
-              <p className="mt-4 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
+              <p className="mt-4 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
                 iPad · 01-sidebar
               </p>
             </motion.div>
@@ -184,7 +184,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
                 index={2}
                 className="rounded-[28px] ring-1 ring-white/10 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.65)]"
               />
-              <p className="mt-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
+              <p className="mt-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#f4ece0]/55">
                 iPhone
               </p>
             </motion.div>
@@ -231,7 +231,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-12 max-w-[640px] font-[var(--font-instrument)] text-xl italic text-[#f4ece0]/80 sm:text-2xl"
+            className="mt-12 max-w-[640px] font-[family-name:var(--font-instrument)] text-xl italic text-[#f4ece0]/80 sm:text-2xl"
           >
             {COPY.devicesCaption[lang]}
           </motion.p>
@@ -254,7 +254,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#f4ece0]/65"
+            className="mt-5 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#f4ece0]/65"
           >
             {COPY.webCaption[lang]}
           </motion.p>
@@ -266,7 +266,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
             href={`https://${COPY.links.server}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#f4ece0] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#181613] transition hover:bg-white"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#f4ece0] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#181613] transition hover:bg-white"
           >
             <span>{COPY.links.server}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
@@ -275,7 +275,7 @@ export function BeaverNotesProject({ lang }: BeaverNotesProjectProps) {
             href={`https://${COPY.links.mcp}`}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-[#f4ece0]/25 px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f4ece0]/85 transition hover:border-[#f4ece0] hover:bg-[#f4ece0] hover:text-[#181613]"
+            className="rounded-full border border-[#f4ece0]/25 px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f4ece0]/85 transition hover:border-[#f4ece0] hover:bg-[#f4ece0] hover:text-[#181613]"
           >
             {COPY.links.mcp}
           </a>

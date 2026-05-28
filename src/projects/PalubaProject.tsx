@@ -74,20 +74,20 @@ export function PalubaProject({ lang }: PalubaProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1f2a2b]/65">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1f2a2b]/65">
             <span aria-hidden className="h-px w-10 bg-[#1f2a2b]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
           <h2
-            className="mt-6 font-[var(--font-instrument)] text-[18vw] leading-[0.92] italic font-normal tracking-[-0.02em] sm:text-[13vw] lg:text-[200px]"
+            className="mt-6 font-[family-name:var(--font-instrument)] text-[18vw] leading-[0.92] italic font-normal tracking-[-0.02em] sm:text-[13vw] lg:text-[200px]"
             style={{ fontFeatureSettings: '"liga"' }}
           >
             {COPY.title[lang]}
             <span className="text-[#c66b50]">*</span>
           </h2>
 
-          <p className="mt-8 max-w-[700px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#1f2a2b]/85 sm:text-2xl">
+          <p className="mt-8 max-w-[700px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#1f2a2b]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -102,10 +102,10 @@ export function PalubaProject({ lang }: PalubaProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#1f2a2b]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#1f2a2b]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-instrument)] text-2xl italic leading-tight sm:text-3xl">
+              <div className="mt-3 font-[family-name:var(--font-instrument)] text-2xl italic leading-tight sm:text-3xl">
                 {f.v[lang]}
               </div>
             </div>
@@ -138,7 +138,7 @@ export function PalubaProject({ lang }: PalubaProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-10 max-w-[600px] text-center font-[var(--font-instrument)] text-2xl italic text-[#1f2a2b]/85 sm:text-3xl"
+            className="mx-auto mt-10 max-w-[600px] text-center font-[family-name:var(--font-instrument)] text-2xl italic text-[#1f2a2b]/85 sm:text-3xl"
           >
             {COPY.shotCaption[lang]}
           </motion.p>

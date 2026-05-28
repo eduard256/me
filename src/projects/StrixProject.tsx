@@ -146,7 +146,7 @@ export function StrixProject({ lang }: StrixProjectProps) {
             <span>{COPY.kicker[lang]}</span>
           </div>
 
-          <h2 className="mt-6 font-[var(--font-jetbrains)] text-[18vw] leading-[0.85] font-light tracking-[-0.04em] sm:text-[14vw] lg:text-[200px]">
+          <h2 className="mt-6 font-[family-name:var(--font-jetbrains)] text-[18vw] leading-[0.85] font-light tracking-[-0.04em] sm:text-[14vw] lg:text-[200px]">
             {COPY.title[lang]}
           </h2>
 

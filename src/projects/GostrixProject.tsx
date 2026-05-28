@@ -68,7 +68,7 @@ export function GostrixProject({ lang }: GostrixProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-white/85 sm:text-2xl">
+          <p className="mt-6 max-w-[720px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-white/85 sm:text-2xl">
             {COPY.taglineBefore[lang]}
             <a
               href="#strix"
@@ -92,7 +92,7 @@ export function GostrixProject({ lang }: GostrixProjectProps) {
               <div className="text-xs uppercase tracking-[0.22em] text-white/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-2 font-[var(--font-inter-tight)] text-lg leading-snug text-white sm:text-xl">
+              <div className="mt-2 font-[family-name:var(--font-inter-tight)] text-lg leading-snug text-white sm:text-xl">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>

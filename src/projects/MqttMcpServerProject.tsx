@@ -62,7 +62,7 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#7fe6ff]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#7fe6ff]">
             <span aria-hidden className="h-px w-10 bg-[#7fe6ff]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
@@ -71,7 +71,7 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[760px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#dcefff]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[760px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#dcefff]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -88,14 +88,14 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
               className="rounded-xl border border-[#7fe6ff]/15 bg-[#13203a] p-6 sm:p-8"
             >
               <div className="flex items-baseline justify-between">
-                <span className="font-[var(--font-jetbrains)] text-2xl text-[#7fe6ff] sm:text-3xl">
+                <span className="font-[family-name:var(--font-jetbrains)] text-2xl text-[#7fe6ff] sm:text-3xl">
                   {tool.name}
                 </span>
-                <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#dcefff]/45">
+                <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#dcefff]/45">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <p className="mt-3 font-[var(--font-inter-tight)] text-base text-[#dcefff]/85 sm:text-lg">
+              <p className="mt-3 font-[family-name:var(--font-inter-tight)] text-base text-[#dcefff]/85 sm:text-lg">
                 {tool.desc[lang]}
               </p>
             </motion.div>
@@ -111,10 +111,10 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#dcefff]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#dcefff]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-base leading-snug sm:text-lg">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-base leading-snug sm:text-lg">
                 {f.v}
               </div>
             </div>
@@ -126,7 +126,7 @@ export function MqttMcpServerProject({ lang }: MqttMcpServerProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#7fe6ff] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0e1626] transition hover:bg-white"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#7fe6ff] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#0e1626] transition hover:bg-white"
           >
             <span>{COPY.links.github}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

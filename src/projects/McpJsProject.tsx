@@ -54,7 +54,7 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#e9c96d]">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#e9c96d]">
             <span aria-hidden className="h-px w-10 bg-[#e9c96d]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
@@ -63,7 +63,7 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[700px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#ffe9a8]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[700px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#ffe9a8]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -79,10 +79,10 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: i * 0.04 }}
               className="flex items-center gap-3"
             >
-              <span className="w-12 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#e9c96d]/70">
+              <span className="w-12 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#e9c96d]/70">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-[var(--font-jetbrains)] text-base text-[#ffe9a8] sm:text-lg">
+              <span className="font-[family-name:var(--font-jetbrains)] text-base text-[#ffe9a8] sm:text-lg">
                 {step}
               </span>
               {i < COPY.flow.length - 1 && (
@@ -103,10 +103,10 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ffe9a8]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#ffe9a8]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-base leading-snug sm:text-lg">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-base leading-snug sm:text-lg">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>
@@ -118,7 +118,7 @@ export function McpJsProject({ lang }: McpJsProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#e9c96d] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#13110b] transition hover:bg-[#ffe9a8]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#e9c96d] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#13110b] transition hover:bg-[#ffe9a8]"
           >
             <span>{COPY.links.github}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

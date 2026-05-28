@@ -61,10 +61,10 @@ export function TheMedProject({ lang }: TheMedProjectProps) {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="flex items-center justify-between gap-4 border-b border-[#231a0e]/35 pb-4"
         >
-          <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/70">
+          <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/70">
             {COPY.kicker[lang]}
           </span>
-          <span className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/70">
+          <span className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#231a0e]/70">
             №04
           </span>
         </motion.div>
@@ -111,7 +111,7 @@ export function TheMedProject({ lang }: TheMedProjectProps) {
             href={`https://${COPY.links.site}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#231a0e] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f6efe1] transition hover:bg-black"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#231a0e] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f6efe1] transition hover:bg-black"
           >
             <span>{COPY.links.site}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>

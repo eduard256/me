@@ -71,7 +71,7 @@ export function PanelProject({ lang }: PanelProjectProps) {
           className="flex flex-wrap items-start justify-between gap-6"
         >
           <div>
-            <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#a896ff]">
+            <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#a896ff]">
               <span aria-hidden className="h-px w-10 bg-[#a896ff]/40" />
               <span>{COPY.kicker[lang]}</span>
             </div>
@@ -82,7 +82,7 @@ export function PanelProject({ lang }: PanelProjectProps) {
           </div>
 
           <div
-            className="rotate-[-2deg] border-2 border-dashed border-[#a896ff]/50 px-4 py-2 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#a896ff]/85"
+            className="rotate-[-2deg] border-2 border-dashed border-[#a896ff]/50 px-4 py-2 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#a896ff]/85"
             aria-label="Private project stamp"
           >
             {COPY.stamp[lang]}
@@ -109,7 +109,7 @@ export function PanelProject({ lang }: PanelProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#e0d8ff]/55">
+              <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#e0d8ff]/55">
                 {f.k[lang]}
               </div>
               <div className="mt-3 text-lg leading-snug sm:text-xl">
@@ -136,7 +136,7 @@ export function PanelProject({ lang }: PanelProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#e0d8ff]/70"
+            className="mt-6 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#e0d8ff]/70"
           >
             {COPY.shotCaption[lang]}
           </motion.p>

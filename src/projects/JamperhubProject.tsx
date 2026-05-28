@@ -105,7 +105,7 @@ export function JamperhubProject({ lang }: JamperhubProjectProps) {
             {COPY.title[lang]}
           </h2>
 
-          <p className="mt-6 max-w-[720px] font-[var(--font-inter-tight)] text-xl leading-snug text-[#d6f5d8]/85 sm:text-2xl">
+          <p className="mt-6 max-w-[720px] font-[family-name:var(--font-inter-tight)] text-xl leading-snug text-[#d6f5d8]/85 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
         </motion.div>
@@ -124,7 +124,7 @@ export function JamperhubProject({ lang }: JamperhubProjectProps) {
               <div className="text-sm uppercase tracking-[0.22em] text-[#3df57e]">
                 {p.tier[lang]}
               </div>
-              <div className="font-[var(--font-inter-tight)] text-lg text-[#d6f5d8]/90 sm:text-xl">
+              <div className="font-[family-name:var(--font-inter-tight)] text-lg text-[#d6f5d8]/90 sm:text-xl">
                 {p.body[lang]}
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export function JamperhubProject({ lang }: JamperhubProjectProps) {
               <div className="text-xs uppercase tracking-[0.22em] text-[#d6f5d8]/55">
                 {f.k[lang]}
               </div>
-              <div className="mt-3 font-[var(--font-inter-tight)] text-base leading-snug text-[#d6f5d8] sm:text-lg">
+              <div className="mt-3 font-[family-name:var(--font-inter-tight)] text-base leading-snug text-[#d6f5d8] sm:text-lg">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
             </div>

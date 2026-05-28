@@ -106,13 +106,13 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0d0d10]/55">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#0d0d10]/55">
             <span aria-hidden className="h-px w-10 bg-[#0d0d10]/30" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
           <h2
-            className="mt-6 font-[var(--font-fraunces)] text-[18vw] leading-[0.86] font-light tracking-[-0.045em] sm:text-[13vw] lg:text-[200px]"
+            className="mt-6 font-[family-name:var(--font-fraunces)] text-[18vw] leading-[0.86] font-light tracking-[-0.045em] sm:text-[13vw] lg:text-[200px]"
             style={{ fontFeatureSettings: '"ss01", "liga"' }}
           >
             {COPY.title[lang]}
@@ -122,7 +122,7 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
           <p className="mt-6 max-w-[680px] text-xl leading-snug text-[#0d0d10]/80 sm:text-2xl">
             {COPY.tagline[lang]}
           </p>
-          <p className="mt-4 max-w-[560px] font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#0d0d10]/55 sm:text-sm">
+          <p className="mt-4 max-w-[560px] font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.18em] text-[#0d0d10]/55 sm:text-sm">
             {COPY.note[lang]}
           </p>
         </motion.div>
@@ -137,10 +137,10 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
         >
           {COPY.facts.map((f) => (
             <div key={f.k.ru}>
-              <div className="font-[var(--font-fraunces)] text-4xl text-[#0d0d10] tabular-nums sm:text-5xl">
+              <div className="font-[family-name:var(--font-fraunces)] text-4xl text-[#0d0d10] tabular-nums sm:text-5xl">
                 {typeof f.v === "string" ? f.v : f.v[lang]}
               </div>
-              <div className="mt-2 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0d0d10]/55">
+              <div className="mt-2 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.22em] text-[#0d0d10]/55">
                 {f.k[lang]}
               </div>
             </div>
@@ -198,7 +198,7 @@ export function ImgableProject({ lang }: ImgableProjectProps) {
             href={`https://${COPY.links.github}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#0d0d10] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f4efe6] transition hover:bg-[#7c4dff]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#0d0d10] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#f4efe6] transition hover:bg-[#7c4dff]"
           >
             <span>{COPY.links.github}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">↗</span>
@@ -217,7 +217,7 @@ function Caption({ text, className = "" }: { text: string; className?: string })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-20% 0px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`max-w-[680px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#0d0d10]/75 sm:text-base ${className}`}
+      className={`max-w-[680px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#0d0d10]/75 sm:text-base ${className}`}
     >
       {text}
     </motion.p>

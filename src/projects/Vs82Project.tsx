@@ -174,7 +174,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
         className="pointer-events-none absolute top-[12%] -right-[6%] z-0 select-none"
       >
         <div
-          className="font-[var(--font-archivo)] text-[42vw] leading-[0.78] tracking-[-0.05em] text-[#1a0d04]/[0.07] sm:text-[34vw] lg:text-[400px]"
+          className="font-[family-name:var(--font-archivo)] text-[42vw] leading-[0.78] tracking-[-0.05em] text-[#1a0d04]/[0.07] sm:text-[34vw] lg:text-[400px]"
           aria-hidden
         >
           {COPY.hugeNumber}
@@ -189,19 +189,19 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1a0d04]/80">
+          <div className="flex items-center gap-3 font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.32em] text-[#1a0d04]/80">
             <span aria-hidden className="h-px w-10 bg-[#1a0d04]/40" />
             <span>{COPY.kicker[lang]}</span>
           </div>
 
           <h2
-            className="mt-6 font-[var(--font-archivo)] text-[14vw] leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[160px]"
+            className="mt-6 font-[family-name:var(--font-archivo)] text-[14vw] leading-[0.88] tracking-[-0.03em] sm:text-[10vw] lg:text-[160px]"
             style={{ textTransform: "uppercase" }}
           >
             {COPY.title[lang]}
           </h2>
 
-          <div className="mt-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#1a0d04]/80 sm:text-base">
+          <div className="mt-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.25em] text-[#1a0d04]/80 sm:text-base">
             {COPY.domain}
           </div>
 
@@ -218,10 +218,10 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 flex items-baseline gap-5 border-t border-[#1a0d04]/15 pt-10 sm:mt-24"
         >
-          <div className="font-[var(--font-archivo)] text-[24vw] leading-[0.85] tracking-[-0.04em] tabular-nums sm:text-[18vw] lg:text-[240px]">
+          <div className="font-[family-name:var(--font-archivo)] text-[24vw] leading-[0.85] tracking-[-0.04em] tabular-nums sm:text-[18vw] lg:text-[240px]">
             {COPY.hugeNumber}
           </div>
-          <div className="font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a0d04]/80 sm:text-base">
+          <div className="font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#1a0d04]/80 sm:text-base">
             {COPY.hugeLabel[lang]}
           </div>
         </motion.div>
@@ -243,7 +243,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[640px] font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1a0d04]/75 sm:text-base"
+            className="mt-5 max-w-[640px] font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1a0d04]/75 sm:text-base"
           >
             {COPY.screenshotCaption[lang]}
           </motion.p>
@@ -271,7 +271,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
           className="mt-24 max-w-[700px] sm:mt-32"
         >
           <div className="border-t-2 border-b-2 border-[#1a0d04] bg-[#fff5e6] p-7 sm:p-9">
-            <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#1a0d04]/60">
+            <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#1a0d04]/60">
               {COPY.receipt.title[lang]}
             </div>
             <dl className="mt-5 divide-y divide-[#1a0d04]/15">
@@ -280,10 +280,10 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
                   key={row.k.ru}
                   className="flex items-baseline justify-between gap-5 py-3"
                 >
-                  <dt className="font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1a0d04]/70">
+                  <dt className="font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.18em] text-[#1a0d04]/70">
                     {row.k[lang]}
                   </dt>
-                  <dd className="text-right font-[var(--font-archivo)] text-lg tracking-tight text-[#1a0d04] sm:text-xl">
+                  <dd className="text-right font-[family-name:var(--font-archivo)] text-lg tracking-tight text-[#1a0d04] sm:text-xl">
                     {typeof row.v === "string" ? row.v : row.v[lang]}
                   </dd>
                 </div>
@@ -304,7 +304,7 @@ export function Vs82Project({ lang }: Vs82ProjectProps) {
             href={`https://${COPY.domain}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#1a0d04] px-7 py-3 font-[var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#F36C13] transition hover:bg-black"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#1a0d04] px-7 py-3 font-[family-name:var(--font-jetbrains)] text-sm uppercase tracking-[0.22em] text-[#F36C13] transition hover:bg-black"
           >
             <span>{COPY.cta.site[lang]}</span>
             <span aria-hidden className="transition group-hover:translate-x-1">
@@ -344,10 +344,10 @@ function FactCard({
       }}
       className="relative"
     >
-      <div className="font-[var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#1a0d04]/55">
+      <div className="font-[family-name:var(--font-jetbrains)] text-xs uppercase tracking-[0.3em] text-[#1a0d04]/55">
         {String(index + 1).padStart(2, "0")} · {heading}
       </div>
-      <div className="mt-3 font-[var(--font-archivo)] text-3xl uppercase leading-tight tracking-[-0.01em] text-[#1a0d04] sm:text-4xl">
+      <div className="mt-3 font-[family-name:var(--font-archivo)] text-3xl uppercase leading-tight tracking-[-0.01em] text-[#1a0d04] sm:text-4xl">
         {value}
       </div>
       <p className="mt-3 max-w-[36ch] text-base leading-snug text-[#1a0d04]/75 sm:text-[17px]">
