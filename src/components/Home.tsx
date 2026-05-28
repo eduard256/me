@@ -50,11 +50,11 @@ export function Home({ lang }: { lang: Lang }) {
       <BeaverNotesProject lang={lang} />
       <VastProject lang={lang} />
       <ImgableProject lang={lang} />
+      <JamperhubProject lang={lang} />
       <TheMedProject lang={lang} />
       <PalubaProject lang={lang} />
       <SkycraftProject lang={lang} />
       <FlowparxProject lang={lang} />
-      <JamperhubProject lang={lang} />
       <YagopereProject lang={lang} />
       <VectorProject lang={lang} />
       <PanelProject lang={lang} />
